@@ -1,2 +1,2 @@
 # Metodos
-<img src="/Imagenes/manzana.jpeg" alt="Diagrama de EDP" width="400"/>
+<img src="/Imagenes/manzana.jpeg" alt="Diagrama de EDP" width="100"/>

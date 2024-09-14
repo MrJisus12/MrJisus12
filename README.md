@@ -1,6 +1,6 @@
 # EDP
 ## Índice
-1.[Métodos para resolver EDP](subtemas/Metodos.md)
+1.[Introducción](subtemas/Metodos.md)
 
-2.[Métodos lineales](subtemas/Metodos.md)
+2.[Forma Canónica de la Ecuación de Onda](subtemas/Metodos.md)
 

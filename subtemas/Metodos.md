@@ -1,3 +1,3 @@
 # ¿Qué es una EDP?
-<img src="/Imagenes/manzana.jpeg" alt="Diagrama de EDP" width="100"/>
-Holaa
+
+Se llama ecuación en derivadas parciales de segundo orden con variables independientes x ^ y a la relación entre la función incógnita u (x,y) y sus derivadas parciales hasta segundo orden.

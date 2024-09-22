@@ -24,4 +24,32 @@ La ecuación se llama homogénea, si $f(x,y) = 0$
 
 #### Forma Canónica de la ecuación de onda.
 
-aa
+Consideremos la ecuación de onda:
+  $u_{xx}(x,t) - \frac{1}{V^2}u_{tt}(x,t) = 0$
+
+donde V es la velocidad de la onda.
+Ahora consideremos la siguiente transformación de coordenadas (admisible).
+
+$\xi = x-vt$, <br>   $\eta = x+vt $
+
+$u_x(\xi, \eta) = \frac{\partial u(\xi,\eta)}{\partial x} = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u}{\partial \eta} \frac{\partial \eta}{\partial x}$
+
+<br>
+
+$u_x = u_\xi + u_\eta$
+
+<br>
+
+$u_{xx}(\xi, \eta) = \frac{\partial^2u (\xi, \eta)}{\partial x^2} = \frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial x} + \frac{\partial u_\xi}{\partial \eta} \frac{\partial \eta}{\partial x} + \frac{\partial u_\eta}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u_\eta}{\partial \eta} \frac{\partial \eta}{\partial x}$
+
+<br>
+
+$u_{xx} = u_{\xi\xi} + u_{\xi\eta} + u_{\eta\xi} + u_{\eta\eta}$
+
+<br>
+
+$u_t(\xi,\eta) = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial t} + \frac{\partial u}{\partial \eta}\frac{\partial \eta }{\partial t}$
+
+<br>
+
+$u_t = V \frac{\partial u}{\partial \eta} - V\frac{\partial u}{\partial \xi}$

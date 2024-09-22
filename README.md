@@ -6,4 +6,4 @@
 
 3.[Ejercicios](ejercicios/prueba.md)
 
-4.[Ecuaciones Cuasilineales](subtemas/cuasilineales)
+4.[Ecuaciones Cuasilineales](subtemas/cuasilineales.md)

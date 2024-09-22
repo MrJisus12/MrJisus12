@@ -1,6 +1,6 @@
 # EDP
 ## Índice
-1.[Unidad 1](subtemas/introduccion.md)
+1.[Unidad 1](teoria.md)
 
 2.[Unidad 2](subtemas/formacanonica.md)
 

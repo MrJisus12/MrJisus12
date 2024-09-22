@@ -1,9 +1,9 @@
 # EDP
 ## Índice
-1.[Introducción](subtemas/introduccion.md)
+1.[Unidad 1](subtemas/introduccion.md)
 
-2.[Forma Canónica de la Ecuación de Onda](subtemas/formacanonica.md)
+2.[Unidad 2](subtemas/formacanonica.md)
 
-3.[Ejercicios](ejercicios/prueba.md)
+3.[Unidad 3](ejercicios/prueba.md)
 
-4.[Ecuaciones Cuasilineales](subtemas/cuasilineales.md)
+4.[Unidad 4](subtemas/cuasilineales.md)

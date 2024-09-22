@@ -11,9 +11,9 @@
   
 1.3.2[Forma canonica de las ecuaciones hiperbolicas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.2_FormaCanonicaDeLasEcuacionesHiperbolicas/Teoria.md)
   
-1.3.3[Forma canonica de las ecuaciones parabolicas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.2_FormaCanonicaDeLasEcuacionesParabolicas/Teoria.md)
+1.3.3[Forma canonica de las ecuaciones parabolicas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.3_FormaCanonicaDeLasEcuacionesParabolicas/Teoria.md)
   
-1.3.4[Forma canonica de las ecuaciones elipticas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.3_FormaCanonicaDeLasEcuacionesElipticas/Teoria.md)
+1.3.4[Forma canonica de las ecuaciones elipticas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.4_FormaCanonicaDeLasEcuacionesElipticas/Teoria.md)
   
 ### Unidad 2: Ecuaciones diferenciales parciales de primer orden.
 

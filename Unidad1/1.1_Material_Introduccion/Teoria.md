@@ -16,9 +16,9 @@ Si los coeficientes $a_{11}, a_{12}, a_{22}$ no dependen solo de $(x,y)$, sino q
 
 Ejemplo:
 
-  $ uu_x, u_x u_{xx}, u_yu_x, u_yu_{yy}$
+  $uu_x, u_x u_{xx}, u_yu_x, u_yu_{yy}$
 
-La ecuación se llama lineal, si es lineal tanto en las derivadas de orden mayor $u_{xx}, u_{xy}, u_{yy}$, como en la función $u$ y en sus primeras derivadas u_x, u_y:
+La ecuación se llama lineal, si es lineal tanto en las derivadas de orden mayor $u_{xx}, u_{xy}, u_{yy}$, como en la función $u$ y en sus primeras derivadas $u_x, u_y$:
 
 $a_{11}u_{xx} + 2a_{12}u_{xy} + a_{22}u_{yy}+b_1u_x+b_2u_y+Cu+f = 0$
 

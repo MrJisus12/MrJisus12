@@ -22,7 +22,7 @@ La ecuación se llama lineal, si es lineal tanto en las derivadas de orden mayor
 
 $a_{11}u_{xx} + 2a_{12}u_{xy} + a_{22}u_{yy}+b_1u_x+b_2u_y+Cu+f = 0$
 
-Siendo $a_{11}, a_{12}, a_{22}, b_1, b_2, C, f $ funciones sólo de $(x,y)$
+Siendo $a_{11}, a_{12}, a_{22}, b_1, b_2, C, f$ funciones sólo de $(x,y)$
 
 Si los coeficientes de la ecuación anterior no dependen de $(x,y)$, se trata de una ecuación lineal con coeficientes constantes.
 

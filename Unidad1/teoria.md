@@ -4,4 +4,5 @@ Se llama ecuación en derivadas parciales de segundo orden con variables indepen
 
 
 
-$ F(x, y, u, u_x, u_y, u_{xx},u_{yy},u_{xy}) = 0$
+$F(x, y, u, u_x, u_y, u_{xx},u_{yy},u_{xy}) = 0$
+

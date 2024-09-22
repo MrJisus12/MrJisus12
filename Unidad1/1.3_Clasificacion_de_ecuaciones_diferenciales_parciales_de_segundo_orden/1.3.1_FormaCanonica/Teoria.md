@@ -12,4 +12,12 @@ $$u_x=u_\xi\ \xi\_x +u_\eta\ \eta\_x$$
 
 $$u_{xx}= (u_{\xi\\xi\} \xi\_x + u_{\xi\\eta\}\eta\_x)\xi\_x + u_\xi\ \xi\_{xx} + (u_{\eta\\xi\} \xi\_x + u_{\eta\\eta\}\eta\_x)\eta\_x + u_\eta\ \eta\_{xx}$$
 
+$$=u_{\xi\\xi\}\xi\_x^{2}+ 2u_{\eta\\xi\}\xi\_x\eta\_x+u_{\eta\\eta\}\eta\_x^{2}+u_\xi\\xi\_{xx}+u_\eta\\eta\_{xx}$$
+
 $$u_y=u_\xi\ \xi\_y+u_\eta\\eta\_y$$
+
+$$u_{yy}= (u_{\xi\\xi\} \xi\_y + u_{\xi\\eta\}\eta\_y)\xi\_y + u_\xi\ \xi\_{yy} + (u_{\eta\\xi\} \xi\_y + u_{\eta\\eta\}\eta\_y)\eta\_y + u_\eta\ \eta\_{yy}$$
+
+$$=u_{\xi\\xi\}\xi\_y^{2}+ 2u_{\eta\\xi\}\xi\_y\eta\_y+u_{\eta\\eta\}\eta\_x^{2}+u_\xi\\xi\_{yy}+u_\eta\\eta\_{yy}$$
+
+$$u_{xy}= \frac{\partial(u_\xi\ \xi\_x +u_\eta\ \eta\_x)}{\partial y}$$

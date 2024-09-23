@@ -1,4 +1,4 @@
-
+# Ecuaciones cuasi - lineales, lineales y no lineales.
 Análogamente se escribe la ecuación para un número mayor de variables independientes.
 La ecuación se llama lineal con respecto a las derivadas de orden mayor si ésta tiene la forma:
 
@@ -90,6 +90,38 @@ Así, la forma canónica de la ecuación de onda es:
 
 $u_{\xi\eta} = 0$
 
+<br>
+
 Si integramos esta última ecuación respecto de $\eta$ se tiene:
 
-aaaa
+$u_\xi = f(\xi)$
+
+<br>
+
+Ahora integramos respecto de $\xi$
+
+$u = \int f(\xi) d\xi + g(\eta)$
+
+Regresando a la forma canónica de la ecuación de onda pero ahora integramos primero respecto de $\xi$.
+
+$u_\eta = h(\eta)$
+
+Luego integramos respecto a $\eta$
+
+$u = \int h(\eta) d\eta + k(\xi)$
+
+<br>
+
+Entonces:
+
+$k(\xi) = \int f(\xi) d\xi$
+
+<br>
+
+$g(\eta) = \int h(\eta) d\eta$
+
+<br>
+
+Por lo tanto:
+
+$u(\xi, \eta) = \int f(\xi) d\xi + \int h(\eta) d\eta$

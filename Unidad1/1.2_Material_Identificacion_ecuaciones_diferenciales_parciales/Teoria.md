@@ -54,8 +54,40 @@ $u_t(\xi,\eta) = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial t}
 
 $u_t = V \frac{\partial u}{\partial \eta} - V\frac{\partial u}{\partial \xi}$
 
-$u_{tt}(\xi,\eta) = \frac{\partial^2u (\xi, \eta)}{\partial t^2} = V [\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t}] - V[\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial \eta}\frac{\partial \eta}{\partial t}] =  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)]$ 
+$u_{tt}(\xi,\eta) = \frac{\partial^2u (\xi, \eta)}{\partial t^2} = V [\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t}] - V[\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial \eta}\frac{\partial \eta}{\partial t}]$
 
 <br>
 
-$=$
+$ =  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)] - V[u_{\xi\xi}(-V) + u_{\xi\eta}(V)]$ 
+
+<br>
+
+$ u_{tt}= -V^2 U_{\xi\xi} + V^2 u_{\eta\eta} - 2V^2u_{\eta\xi}$
+
+<br>
+
+$u_{xt}(\xi,\eta) = \frac{\partial u_x}{\partial t} = (\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial u_\eta}\frac{\partial u_\eta}{\partial t}) + (\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t})$
+
+<br>
+
+$u_{xt} = -Vu_{\xi\xi} + Vu_{\xi\eta} - Vu_{\eta\xi} + Vu_{\eta\eta}$
+
+<br>
+
+Sustituimos $u_{xx}$, $u_{tt}$ en la ecuación de onda y obtenemos:
+
+<br> 
+
+$u_{\xi\xi} + u_{\xi\eta} + u_{\eta\eta} - (u_{\eta\eta} - 2u_{\eta\xi} + u_{\xi\xi}) = 0$
+
+<br>
+
+Así, la forma canónica de la ecuación de onda es:
+
+<br>
+
+$u_{\xi\eta} = 0$
+
+Si integramos esta última ecuación respecto de $\eta$ se tiene:
+
+aaaa

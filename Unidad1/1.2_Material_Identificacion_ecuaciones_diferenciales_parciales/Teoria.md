@@ -22,6 +22,8 @@ Si los coeficientes de la ecuación anterior no dependen de $(x,y)$, se trata de
 
 La ecuación se llama homogénea, si $f(x,y) = 0$
 
+<br>
+
 ### Forma Canónica de la ecuación de onda.
 
 Consideremos la ecuación de onda:

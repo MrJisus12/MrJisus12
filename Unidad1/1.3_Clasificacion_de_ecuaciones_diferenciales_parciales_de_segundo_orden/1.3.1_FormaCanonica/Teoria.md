@@ -41,3 +41,17 @@ asi, obtenemos:
 $$\bar{a_{11}}u_{\xi\xi}+ 2\bar{a_{12}}u_{\xi\eta}+\bar{a_{22}}u_{\eta\eta}+ \bar{F}=0. $$
 
 En donde $\bar{F}$ no depende de las segundas derivadas.
+
+Ahora, escogemos las variables $\xi$ y $\eta$ de modo que el coeficiente $\bar{a_{11}}$ sea nulo, es decir:
+
+$$a_{11}\xi_x^{2} + 2a_{12} \xi_x\xi_y+a_{22}\xi_y^{2} = 0,$$
+
+en otras palabras, se elige \xi de tal forma que sea solución a la ecuacion diferencial parcial anterior.
+
+Para encontrar $\xi(x,y)$ es necesario demostrar algunos lemas: 
+
+Lema #1: si $z=\varphi(x,y)$ es una solución particular de la ecuación: 
+
+$$a_{11}z_x^{2} + 2a_{12} z_x z_y+a_{22}z_y^{2} = 0,$$
+
+la relación $\varphi(x,y)=0$ es una integral general de la ecuación diferencial ordinaria:

@@ -54,15 +54,17 @@ $u_t(\xi,\eta) = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial t}
 
 $u_t = V \frac{\partial u}{\partial \eta} - V\frac{\partial u}{\partial \xi}$
 
+<bt>
+
 $u_{tt}(\xi,\eta) = \frac{\partial^2u (\xi, \eta)}{\partial t^2} = V [\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t}] - V[\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial \eta}\frac{\partial \eta}{\partial t}]$
 
 <br>
 
-$ =  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)] - V[u_{\xi\xi}(-V) + u_{\xi\eta}(V)]$ 
+$=  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)] - V[u_{\xi\xi}(-V) + u_{\xi\eta}(V)]$ 
 
 <br>
 
-$ u_{tt}= -V^2 U_{\xi\xi} + V^2 u_{\eta\eta} - 2V^2u_{\eta\xi}$
+$u_{tt}= -V^2 U_{\xi\xi} + V^2 u_{\eta\eta} - 2V^2u_{\eta\xi}$
 
 <br>
 

@@ -22,7 +22,7 @@ Si los coeficientes de la ecuación anterior no dependen de $(x,y)$, se trata de
 
 La ecuación se llama homogénea, si $f(x,y) = 0$
 
-#### Forma Canónica de la ecuación de onda.
+### Forma Canónica de la ecuación de onda.
 
 Consideremos la ecuación de onda:
   $u_{xx}(x,t) - \frac{1}{V^2}u_{tt}(x,t) = 0$
@@ -30,7 +30,7 @@ Consideremos la ecuación de onda:
 donde V es la velocidad de la onda.
 Ahora consideremos la siguiente transformación de coordenadas (admisible).
 
-$\xi = x-vt$, <br>   $\eta = x+vt $
+$\xi = x-vt$ <br>   $\eta = x+vt $
 
 $u_x(\xi, \eta) = \frac{\partial u(\xi,\eta)}{\partial x} = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u}{\partial \eta} \frac{\partial \eta}{\partial x}$
 
@@ -53,3 +53,9 @@ $u_t(\xi,\eta) = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial t}
 <br>
 
 $u_t = V \frac{\partial u}{\partial \eta} - V\frac{\partial u}{\partial \xi}$
+
+$u_{tt}(\xi,\eta) = \frac{\partial^2u (\xi, \eta)}{\partial t^2} = V [\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t}] - V[\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial \eta}\frac{\partial \eta}{\partial t}] =  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)]$ 
+
+<br>
+
+$=$

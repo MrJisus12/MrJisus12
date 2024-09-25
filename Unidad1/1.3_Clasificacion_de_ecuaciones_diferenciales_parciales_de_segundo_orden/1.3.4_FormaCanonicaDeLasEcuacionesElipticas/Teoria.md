@@ -90,4 +90,4 @@ $$y = {Re}(z_x) x + \alpha$$
 
 $$\alpha= y - {Re}(z_x) x$$
 
-Restando $a)$ y $b)$
+

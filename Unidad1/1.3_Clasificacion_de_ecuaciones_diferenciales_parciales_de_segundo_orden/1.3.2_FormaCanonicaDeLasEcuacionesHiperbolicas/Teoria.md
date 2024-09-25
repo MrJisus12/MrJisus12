@@ -1,3 +1,5 @@
+## FORMA CANONICA DE LAS ECUACIONES HIPERBOLICAS##
+
 **Lema #2:** Si $\psi(x, y) = C$ es una integral general de la ecuación
 diferencial ordinaria
 

@@ -9,7 +9,7 @@
 
 [Forma canónica](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.1_FormaCanonica/Teoria.md)
   
-[Forma canónica de las ecuaciones hiperbólicas](Unidad1/1.3_Clasificación_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.2_FormaCanonicaDeLasEcuacionesHiperbolicas/Teoria.md)
+[Forma canónica de las ecuaciones hiperbólicas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.2_FormaCanonicaDeLasEcuacionesHiperbolicas/Teoria.md)
   
 [Forma canónica de las ecuaciones parabólicas](Unidad1/1.3_Clasificacion_de_ecuaciones_diferenciales_parciales_de_segundo_orden/1.3.3_FormaCanonicaDeLasEcuacionesParabolicas/Teoria.md)
   

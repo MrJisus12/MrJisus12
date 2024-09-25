@@ -78,7 +78,7 @@ Donde:
 
 a) $$y = z_x + \xi =  z_x + (\alpha + i\beta)$$
 
-b) $$y = z_x + \eta =  z_x + (\alpha - i\beta)$$
+b) $$y = z^{*}_{x} + \eta = z^{*}_{x}+ (\alpha - i\beta)$$
 
 Sumando $a)$ y $b)$
 

@@ -30,3 +30,5 @@ $$\bar{a_{11}=a_{11}\xi_x^{2}+2a_{12}\xi_x\xi_y+a_{22}\xi_y^{2}}$$
 $$=a_{11}(\alpha_x+ i\beta_x)^{2} +2a_{12}(\alpha_x+ i\beta_x)(\alpha_y+ i\beta_y)+a_{22}(\alpha_y+ i\beta_y)^{2}$$
 
 $$=a_{11}\alpha_x^{2}+2a_{11}\alpha_x i\beta_x-a_{11}\beta_x^{2}+2a_{12}(\alpha_x \alpha_y + \alpha_x i \beta_y+ i \beta_x \alpha_y + i^{2} \beta_y \beta_x)+a_{22}\alpha_y^{2}+ 2a_{22}\alpha_y i \beta_y - a_{22}\beta_y$$
+
+

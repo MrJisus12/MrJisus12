@@ -106,7 +106,24 @@ características.\
 jacobiano de la transformación de variables y tiene que ser diferente de
 cero.
 
--   Ecuación tipo hiperbólica.
+**Forma de la ecuación tipo hiperbólica**
 
--   Sus integrales generales $\Phi(x,y) = \text{cte}$ y
-    $\Psi(x,y) = \text{cte}$ son constantes diferentes.
+Sus integrales generales $\Phi(x,y) = \text{cte}$ y $\Psi(x,y) = \text{cte}$ son constantes diferentes.
+\text{Determinan una familia de características. Se tiene:}
+\[
+U_{\eta} = \Phi \left( E, \eta, U, U_{\xi}, U_{\eta} \right) 
+\]
+\[
+\text{con} \quad \Phi = \frac{-F}{2a_{12}}
+\]
+\text{Forma canónica de las ecuaciones tipo hiperbólicas.}
+
+Determinan una familia de características. Se tiene:
+
+$$U_{\eta} = \Phi \left( E, \eta, U, U_{\xi}, U_{\eta} \right)$$
+
+con
+
+$$\Phi = \frac{-F}{2a_{12}}$$
+
+Forma canónica de las ecuaciones tipo hiperbólicas

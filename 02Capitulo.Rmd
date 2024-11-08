@@ -1,0 +1,497 @@
+# Ecuaciones diferenciales parciales de primer orden
+
+## Curvas Características.
+Curvas características una ecuación diferencial parcial de primer orden definido en un dominio $\Omega$ se expresa en forma general como una relación funcional entre la variable independientes $x = (x_1,x_2,...,x_n)\Omega$ una función desconocida $u(x)$ y sus derivadas parciales de primer orden:
+
+
+
+$$F(x,u(x),\nabla u(x)) = 0$$
+
+
+La EDP de primer orden se llama lineal cuando adquiere la forma:
+
+
+$$\sum_{i=1}^{n} a_i(x) \frac{\partial u}{\partial x_i} = 0$$
+
+
+
+Y es cuasilineal cuando se expresa como:
+
+$$\sum_{i=1}^{n} a_i(x) \frac{\partial u}{\partial x_i} = b(x,u)$$
+
+
+<br>
+
+### El teorema de Cauchy.
+
+El problema de Cauchy puede definirse de manera general como sigue: 
+
+
+Encontrar la solución de:
+
+$$F(x,u,\nabla (u))$$
+
+
+Tal que se cumpla (condiciones):
+
+$$u(r(s)) = \Phi (s)$, s $\in \Omega$$
+
+<br>
+
+### EDP lineales de primer orden en dos dimensiones.
+
+La idea general para la construcción de la solución de una ecuación lineal de primer orden, en el caso particular:
+
+$$A(x, y) \frac{\partial u}{\partial x} + B(x, y) \frac{\partial u}{\partial y} = 0 \text{ . . .(1)}$$
+
+donde A y B son funciones diferenciales en una región y que no se anulan simultáneamente ningún punto $\Omega$.
+
+Vamos a realizar una interpretación geométrica de la solución (1).
+
+$U$ es solución de (1) sí solo sí para cada $(x, y)$ que pertenece a $\Omega$ El vector  $(A(x, y), B (x,y))$ es ortogonal el gradiente de $U$.
+
+$$\vec{v} = (A(x,y),B(x,y))$$
+
+$$u(x, y) = \left( \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y} \right)$$
+
+$$\vec{v} u = (A(x,y) ( \frac{\partial u}{\partial x}) + B(x,y)  \frac{\partial u}{\partial y})$$
+
+Esto también lo podemos interpretar como $(A,B)$ $\perp$ sí solo si la derivada de $U$ en la dirección de $(A,B)$ es nula.
+
+Consideremos las curvas $\tau$ en $\Omega$ expresadas paramétricamente en la forma ${x(t),y(t)}$ cuyos vectores tangentes en cada punto son colineales a $(A(x(t),y(t)),B(x(t),y(t))$.
+
+Estas curvas satisfacen el sistema de ecuaciones diferenciales.
+
+$$\frac{dx}{dt} = A(x, y)$$
+
+$$\frac{dy}{dt} = B(x, y)$$
+
+O bien podemos escribir:
+
+$$\frac{B(x,y)}{A(x,y)} = \frac{dy}{dx}$$
+
+O equivalentemente:
+
+$$\frac{dx}{A(x,y)}=\frac{dy}{B(x,y)}$$
+
+Las cuales se llaman curvas características.
+
+Observación:
+
+Como
+
+$$\frac{dx}{dt} = A(x,y)$$
+
+$$\frac{dy}{dt} = B(x,y)$$
+
+$$A(x,y) \frac{\partial u}{\partial x} + B(x,y)  \frac{\partial u}{\partial y} = 0$$
+
+Entonces:
+
+$$\frac{\partial u}{\partial x} \frac{dx}{dt} + \frac{\partial u}{\partial y} \frac{dy}{dt} = 0$$
+
+Que es la derivada total.
+
+$$\frac{du}{dt} = 0$$
+
+u es constante en las curvas características.
+
+Es decir las curvas características son curvas de nivel de la superficies integrales que corresponden a las soluciones.
+
+Consideremos ahora la curva $\gamma = ({ \gamma_1 (\theta), \gamma_2 (\theta) })$ en que ningún punto sea tangente a la curva característica y además corta cada curva característica en un solo punto.
+
+Bajo esta suposiciones se dice que la curva $\gamma$ satisface la condición de transversalidad. Entonces, con respecto a $\gamma$ y las curvas características, se puede definir un nuevo sistema de coordenadas en $\Omega$ el cual cada punto p de coordenadas $(x,y)$ se le hace corresponder las nuevas coordenadas $(\theta, t)$, teta es el parámetro en el punto sobre $\gamma$ que intersecta la característica que contiene a p y t es el valor del parámetro que corresponde p en la característica.
+
+Sin pérdida de generalidad el valor $t=0$ corresponde a los puntos de intersección de cada curva característica con la curva $\gamma$.
+
+La correspondencia es biyectiva lo cual se expresa analíticamente como:
+
+$$x = X(\theta,t)$$
+
+$$y = Y(\theta,t)$$
+
+$$\theta = \Theta (x,y)$$
+
+$$t = T(x,y)$$
+
+En las variables $(\theta,t)$ las ecuaciones de las curvas características adquieren la forma.
+
+$$\frac{d \theta}{dt} = 0$$
+
+ya que el valor de $\theta$ es constante sobre cada característica, es decir:
+
+$\Theta (x,y) = C$,  $\forall (x,y)$ con C - constante
+
+que es una misma característica.
+
+Ejemplo sobre características:
+ 
+Considera la EDP
+
+$$U_x + U_y + xy \, u^2 = 0$$
+
+$$xU_x + yU_y + U = 0$$
+
+Identificamos 
+$A(x,y) = x$ 
+$B(x,y) =y$
+
+$$\frac{dy}{dx} = \frac{y}{x}$$
+
+$$\frac{dy}{y} = \frac{dx}{x}$$
+
+$$\ln |y| = \ln |x| + C$$ 
+
+$$e^{\ln |y|} = e^ {\ln |x| + C}$$
+
+$$y = m x $$
+con m constante.
+
+**Ejemplo 3:**
+
+$$sen(y)U_x + cos(x)U_y + u^3 = 0$$
+
+Identificamos 
+$A(x,y) = sen(y)$ 
+$B(x,y) = cos(x)$
+
+$$sen (y) dy = cos (x) dx$$
+
+$$\int sen (y) dy = \int cos (x) dx$$
+
+$$- cos (y) = sen (x) + C, C-constante$$
+
+$$cos (y) = -sen (x) + C_1, C_1 - constante$$
+
+$$y = arc(-sen(x)+ C_1))$$
+
+En las variables $(\theta, t)$ se puede obtener fácilmente la solución de la EDP.
+
+$$A \frac{\partial U}{\partial x} + B \frac{\partial U}{\partial y} = 0$$
+
+Si para la solución u se hace el cambio de variables:
+
+$$U(x,y) = U(x(\theta, t), y(\theta,t )) = v(\theta, t)$$
+
+es decir, se cumple que para cada $\theta$ fijo $(\theta_0):$
+
+$$(x(\theta_0,t), y(\theta_0,t)) = (x(t),y(t))$$
+
+Es la parametrización en $t$ de la curva característica que intersecta a $\gamma$ en $\theta_0$, por ello:
+
+$$\frac{\partial U}{\partial t} = \frac{\partial U}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial U}{\partial y} \frac{\partial y}{\partial t} = \frac{\partial U}{\partial x} \frac{ dx}{dt} + \frac{\partial U}{\partial y} \frac{dy}{dt}$$
+
+$$= A \frac{\partial U}{\partial x} + B \frac{\partial U}{\partial y} = 0$$
+
+Podemos decir que la EDP (1) se reduce a
+
+$$\frac{\partial v}{\partial t} = 0$$
+
+$v = F(\theta)$, función de theta, en consecuencia $u(x,y) = F(\theta(x,y))$, tener en consideración que F es una función derivable.
+
+**Ejemplo analógo**
+
+¿Bajo qué condiciones es posible obtener una solución única de la ecuación (1)?
+Considerar una curva $\gamma$ que satisface la condición de transversalidad con respecto a las curvas características de la ecuación (1) y parametrizada mediante 
+
+$$(x(\theta),y(\theta)) = w (\theta)$$
+
+Se dirá que un satisface la condición de Cauchy sobre $\gamma$ si los valores de u en $\gamma$ coinciden con los valores de una función dada w.
+
+$$u(x, y) \big|_{\gamma} = U (x(\theta),y(\theta)) = w(\theta)$$
+
+A la función $(\theta)$ se le llama dato de Cauchy sobre $\gamma$.
+
+Sí $\phi(x,y)$ es una función diferenciable que es constante sobre las curvas características de la EDP,entonces cada valor fijo del parámetro $\xi$ determina una curva característica de dicha ecuación dada por:
+
+$$\tau_\xi = ((x,y) : \phi(x,y) = \xi)$$
+
+Al resolver la ecuación $\phi (x(s),y(s)) = \xi$ se obtiene el único valor $\beta(\xi)$ del parámetro s (encontrar el valor de s) que corresponde al punto de intersección $(x(\beta(\xi)), y(\beta(\xi)))$ de la curva $\gamma$ con la curva característica $\tau_\xi$.
+
+De esta manera se puede representar el dato de Cauchy $w(s)$ con respecto al parámetro $\xi$ mediante $w(\beta(\xi))$ y como sobre toda la curva característica $\tau_\xi$ se tiene $\phi(x,y) = \xi$ entonces:
+
+$$u(x, y) \big|_{\gamma} = w(s) = w(\beta(\xi)) = w(\beta(\phi(x,y)))$$
+
+Recordando que $U (x,y) = F(\theta(x,y)) = F(\phi (x,y))$
+
+El que la expresión $U(x,y) = w(\beta(\phi(x,y)))$ sea la única solución del problema de Cauchy se desprende del hecho de que si el problema tuviera dos soluciones $U_1, U_2$ 
+Entonces $U = U_1 - U_2$ sería solución de la EDP (1) con condiciones nulas de Cauchy sobre $\gamma$, pero como estas soluciones deben ser constantes sobre las características, las cuales cubren todo $\Omega$ se concluye que en $U = 0$ en $\Omega$ y por lo tanto $U_1 = U_2$.
+
+Cuando el dato de Cauchy se impone sobre una curva característica el correspondiente problema de Cauchy puede tener muchas soluciones o no tener solución. Sea $\tau$  una curva característica de la EDP (1), se consideran los dos siguientes casos:
+
+**Caso 1.**
+
+$$u(x, y) \big|_{\gamma_1} = w_0 = constante$$
+
+En este caso si $\phi(x,y)$ es una función constante sobre las características de la ecuación parcial, tal que $\phi(x, y) \big|_{\gamma_1} = \xi_1$, entonces para cualquier función derivable $f(\xi)$  se tiene que la función $U(x,y) = f(\phi(x,y))$ es solución del correspondiente problema de Cauchy.
+
+**Caso 2.**
+
+$$u(x, y) \big|_{\gamma_1} \neq constante$$
+
+En este caso no existe solución del problema de Cauchy dado que cualquier solución de la EDP (1) debe ser constante sobre las curvas características.
+
+<br>
+
+## Ecuaciones diferenciales parciales lineales de primer orden en dimensión n>2
+
+En esta sección se considerará la siguiente EDP:
+
+$$
+\sum_{i=1}^{n} A_i (x_1,x_2,\ldots,x_n)\frac{\partial u}{\partial x_i} = 0
+$$
+
+donde $A_i (x_1,x_2,\ldots,x_n)$ son funciones diferenciables en la región $\Omega$ de $\mathbb{R}^2$. Las funciones $A_i$ no son nulas simultáneamente en algún punto de $\Omega$.
+
+Las ecuaciones de las curvas paramétricas, $\Gamma$, se definen mediante el sistema de ecuaciones:
+
+$$
+\frac{dy}{dx} = A_i (x_1,x_2,\ldots,x_n)
+$$
+
+con $i= 1,2,3,\ldots,n$.
+
+Si consideramos $t$ como el parámetro que describe la curva, tenemos:
+
+$$
+\frac{dx_1}{A_1} = \frac{dx_2}{A_2} = \ldots = \frac{dx_n}{A_n}
+$$
+
+Observación:
+
+$$
+\sum_{i=1}^{n} A_i (\vec{x})\frac{\partial u}{\partial x_i} = \sum_{i=1}^{n} \frac{dx_i}{dt}\frac{\partial u}{\partial x_i} = \frac{du}{dt} = 0
+$$
+
+Por lo tanto,
+
+$$
+\frac{du}{dt} = 0
+$$
+
+Las soluciones de la EDP son constantes sobre las curvas características. Similar al caso $n=2$, se define la primera característica como la función $\varphi(x_1,x_2,\ldots,x_n)$, la cual es diferenciable y constante en la curva característica.
+
+Para obtener el conjunto de funciones primeras características, consideremos una superficie $S$ en $\Omega$ de $\mathbb{R}^{n-1}$ que cumple con la condición de transversalidad respecto a las curvas características:
+
+- La curva $\Gamma$ solo intersecta a $S$ en un único punto.
+- Ninguna curva característica en $\Gamma$ es tangente a $S$, es decir, el vector $\vec{A}= (A_1, A_2, \ldots, A_n)$ no está en el espacio tangente $t(\vec{x})$ de $S$.
+
+Si la superficie $S$ está definida por la ecuación:
+
+$$
+g (x_1, x_2, \ldots, x_n) = 0
+$$
+
+el vector normal a $S$ en $(x_1, x_2, \ldots, x_n)$ es:
+
+$$
+\vec{n} (x_1, x_2, \ldots, x_n) = \nabla g (x_1, x_2, \ldots, x_n)
+$$
+
+El vector $\vec{A}= (A_1, A_2, \ldots, A_n)$ no es ortogonal a $\vec{n}$:
+
+$$
+\nabla g \cdot \vec{A} \neq 0 \Longrightarrow \vec{A} \notin t(\vec{x})
+$$
+
+Cada punto de $S$ admite una parametrización de la forma:
+
+$$
+\begin{matrix}
+x_1 = x_1(\theta_1, \theta_2, \ldots, \theta_{n-1}) \\
+\vdots \\
+x_n = x_n(\theta_1, \theta_2, \ldots, \theta_{n-1}) 
+\end{matrix}
+$$
+
+Si se construye $S$ de forma paramétrica, entonces $t(\vec{x})$ en cada punto $p(x)$ corresponde a un valor determinado de los parámetros $\theta_s$. Además, el espacio $t$ es generado por los vectores:
+
+$$
+\frac{dx}{d\theta_1}, \frac{dx}{d\theta_2}, \ldots, \frac{dx}{d\theta_n}
+$$
+
+con $x = (x_1, x_2, \ldots, x_n)$.
+
+Dado esto, la expresión $\nabla g \cdot \vec{A} \neq 0$ indica que $\vec{A}$ no se genera con los vectores $\frac{dx}{d\theta}$. Lo podemos escribir como:
+
+$$
+\det \left(\frac{dx}{d\theta_1}, \frac{dx}{d\theta_2}, \ldots, \frac{dx}{d\theta_n}, \vec{A}\right) \neq 0
+$$
+
+Si se tiene $S$, podemos construir la solución de la ecuación diferencial de la siguiente forma:
+
+A cada conjunto de parámetros $(\theta_1, \theta_2, \ldots, \theta_{n-1})$ se le asocia un vector $x \in S$ y a este punto le corresponde una curva característica con parámetro $t$:
+
+$$
+x_i = x_i(\theta_1, \theta_2, \ldots, \theta_{n-1}, t)
+$$
+
+con $i = 1, 2, 3, \ldots, n$ y $t = t(x_1, x_2, \ldots, x_n)$.
+
+Así, en relación con las nuevas coordenadas de la EDP:
+
+$$
+\frac{\partial \nu }{\partial t} = 0 \Longrightarrow \nu = F(\theta_1, \theta_2, \ldots, \theta_{n-1})
+$$
+
+En términos de valores de $x$:
+
+$$
+u(x) = F(\theta(x)_1, \theta(x)_2, \ldots, \theta(x)_n)
+$$
+
+Recordemos que $\theta_i$ son constantes y diferenciables. Extendido a funciones diferenciables:
+
+$$
+\Phi(x)_1, \Phi(x)_2, \ldots, \Phi(x)_n
+$$
+
+constantes en las curvas características, tenemos
+
+$$
+u(x_1, x_2, \ldots, x_n) = F(\Phi(x_1, x_2, \ldots, x_n)_1, \Phi(x_1, x_2, \ldots, x_n)_2, \ldots, \Phi(x_1, x_2, \ldots, x_n)_n)
+$$
+
+Como caso particular, cada una de las primeras integrales $\Phi_i$ son soluciones de la EDP.
+
+Ejemplo:
+
+Resuelve la siguiente ecuación diferencial parcial:
+
+$$
+x_2 \frac{\partial u}{\partial x_1} + x_1 \frac{\partial u}{\partial x_2} + \frac{\partial u}{\partial x_3} = 0
+$$
+
+Obteniendo las curvas características:
+
+$$
+\frac{dx_1}{A_1} = \frac{dx_2}{A_2} = \ldots = \frac{dx_n}{A_n}
+$$
+
+$$
+\frac{dx_1}{x_2} =\frac{dx_2}{x_1}=\frac{dx_3}{1}
+$$
+
+O bien
+$$
+\begin{equation}
+    \frac{dx_1}{dx_3} =x_2
+\end{equation}
+$$
+$$
+\begin{equation}
+    \frac{dx_2}{dx_3} =x_1
+\end{equation}
+$$
+
+Sumando (1) y (2) 
+
+$$
+\frac{d(x_1 + x_2)}{dx_3} =x_1 + x_2
+$$
+
+$$
+\int   \frac{d(x_1 + x_2)}{dx_3} =\int x_3
+$$
+
+$$
+\ln (x_1 + x_2) = x_3 + C
+$$
+
+con $C$ constante
+
+$$
+x_1 + x_2=\beta   e ^{x_3 }
+$$
+
+con $\beta$ constante 
+
+$$
+\beta =(x_1 + x_2) e ^{-x_3 }
+$$
+
+$$
+\Longrightarrow \Phi(x_1,x_2,x_3)
+$$
+
+$$
+\Phi_1= (x_1+x_2)e ^{-x_3 }
+$$
+
+Restando (2) a (1) tenemos :
+
+$$
+\Phi_2= (x_2-x_1)e ^{x_3 }
+$$
+
+Ejemplo:
+
+Resuelve el siguiente problema de Cauchy:
+
+$$
+y \frac{\partial u}{\partial x} - x \frac{\partial u}{\partial y} = 0
+$$
+
+con $u(x, 0) = x^2$.
+
+primero planteamos las ecuaciones de las curvas caracteristicas 
+
+$$
+\frac{dx_1}{A_1} =\frac{dx_2}{A_2}
+$$
+
+$$
+\Longrightarrow \frac{dx}{y} =\frac{dy}{-x}
+$$
+
+resolviendo 
+
+$$
+-xdx=ydy
+$$
+
+$$
+-\frac{x^2}{2} =\frac{y^2}{2}+C_1
+$$
+
+Con $C_1$ constante 
+
+$$
+-\frac{x^2}{2} -\frac{y^2}{2}=C_1
+$$
+
+$$
+-x^2 -y^2=2C_2
+$$
+
+$$
+x^2 +y^2=-2C_2
+$$
+
+$$
+x^2 +y^2=C_3
+$$
+
+Con $C_3=-2C_2$ 
+
+$$
+\Longrightarrow \Phi=x^2 +y^2
+$$
+
+$$
+u(x,y)=f(\Phi (x,y))
+$$
+
+Aplicando el datode cauchy   $u(x,0)=x^2$
+
+Igualando :
+
+$$
+f(x^2)=x^2
+$$
+
+Es decir $f(z)=z$
+
+$$
+u(x,y)=f(\Phi (x,y))=\Phi (x,y)=x^2 +y^2
+$$

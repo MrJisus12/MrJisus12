@@ -1,0 +1,642 @@
+# Clasificación de las ecuaciones diferenciales parciales.
+
+## Ecuaciones diferenciales con dos variables independientes.
+
+Se llama ecuación en derivadas parciales de segundo orden con variables independientes $x,y$ a la relación entre la función incógnita $u(x,y)$ y sus derivadas parciales hasta segundo orden.
+
+$$F(x, y, u, u_x, u_y, u_{xx},u_{yy},u_{xy}) = 0$$
+
+Análogamente se escribe la ecuación para un número mayor de variables independientes.
+
+## Ecuaciones cuasi - lineales, lineales y no lineales.
+
+Análogamente se escribe la ecuación para un número mayor de variables independientes.
+La ecuación se llama lineal con respecto a las derivadas de orden mayor si ésta tiene la forma:
+
+$$a_{11}u_{xx}+2a_{12}u_{xy} + a_{22}u_{yy} + F_{1} (x, y, u, u_x, u_y) = 0$$
+
+donde $a_{11}, a_{12}, a_{22}$ son funciones de $(x,y)$, no de $u$.
+
+Si los coeficientes $a_{11}, a_{12}, a_{22}$ no dependen solo de $(x,y)$, sino que son funciones de $x, y, u, u_x, u_y$, entonces la ecuación se denomina cuasi - lineal.
+
+Ejemplo:
+
+  $$uu_x, u_x u_{xx}, u_yu_x, u_yu_{yy}$$
+
+La ecuación se llama lineal, si es lineal tanto en las derivadas de orden mayor $u_{xx}, u_{xy}, u_{yy}$, como en la función $u$ y en sus primeras derivadas $u_x, u_y$:
+
+$$a_{11}u_{xx} + 2a_{12}u_{xy} + a_{22}u_{yy}+b_1u_x+b_2u_y+Cu+f = 0$$
+
+Siendo $a_{11}, a_{12}, a_{22}, b_1, b_2, C, f$ funciones sólo de $(x,y)$
+
+Si los coeficientes de la ecuación anterior no dependen de $(x,y)$, se trata de una ecuación lineal con coeficientes constantes.
+
+La ecuación se llama homogénea, si $f(x,y) = 0$
+
+
+### Forma Canónica de la ecuación de onda.
+
+Consideremos la ecuación de onda:
+  $u_{xx}(x,t) - \frac{1}{V^2}u_{tt}(x,t) = 0$
+
+donde V es la velocidad de la onda.
+Ahora consideremos la siguiente transformación de coordenadas (admisible).
+
+$$\xi = x-vt$$    
+$$\eta = x+vt$$
+
+$$u_x(\xi, \eta) = \frac{\partial u(\xi,\eta)}{\partial x} = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u}{\partial \eta} \frac{\partial \eta}{\partial x}$$
+
+<br>
+
+$$u_x = u_\xi + u_\eta$$
+
+<br>
+
+$$u_{xx}(\xi, \eta) = \frac{\partial^2u (\xi, \eta)}{\partial x^2} = \frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial x} + \frac{\partial u_\xi}{\partial \eta} \frac{\partial \eta}{\partial x} + \frac{\partial u_\eta}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u_\eta}{\partial \eta} \frac{\partial \eta}{\partial x}$$
+
+<br>
+
+$$u_{xx} = u_{\xi\xi} + u_{\xi\eta} + u_{\eta\xi} + u_{\eta\eta}$$
+
+<br>
+
+$u_t(\xi,\eta) = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial t} + \frac{\partial u}{\partial \eta}\frac{\partial \eta }{\partial t}$
+
+<br>
+
+$u_t = V \frac{\partial u}{\partial \eta} - V\frac{\partial u}{\partial \xi}$
+
+<bt>
+
+$$u_{tt}(\xi,\eta) = \frac{\partial^2u (\xi, \eta)}{\partial t^2} = V [\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t}] - V[\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial \eta}\frac{\partial \eta}{\partial t}]$$
+
+<br>
+
+$$=  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)] - V[u_{\xi\xi}(-V) + u_{\xi\eta}(V)]$$
+
+<br>
+
+$$u_{tt}= -V^2 U_{\xi\xi} + V^2 u_{\eta\eta} - 2V^2u_{\eta\xi}$$
+
+<br>
+
+$$u_{xt}(\xi,\eta) = \frac{\partial u_x}{\partial t} = (\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial u_\eta}\frac{\partial u_\eta}{\partial t}) + (\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t})$$
+
+<br>
+
+$$u_{xt} = -Vu_{\xi\xi} + Vu_{\xi\eta} - Vu_{\eta\xi} + Vu_{\eta\eta}$$
+
+<br>
+
+Sustituimos $u_{xx}$, $u_{tt}$ en la ecuación de onda y obtenemos:
+
+<br> 
+
+$$u_{\xi\xi} + u_{\xi\eta} + u_{\eta\eta} - (u_{\eta\eta} - 2u_{\eta\xi} + u_{\xi\xi}) = 0$$
+
+<br>
+
+Así, la forma canónica de la ecuación de onda es:
+
+<br>
+
+$$u_{\xi\eta} = 0$$
+
+<br>
+
+Si integramos esta última ecuación respecto de $\eta$ se tiene:
+
+$$u_\xi = f(\xi)$$
+
+<br>
+
+Ahora integramos respecto de $\xi$
+
+$$u = \int f(\xi) d\xi + g(\eta)$$
+
+Regresando a la forma canónica de la ecuación de onda pero ahora integramos primero respecto de $\xi$.
+
+$$u_\eta = h(\eta)$$
+
+Luego integramos respecto a $\eta$
+
+$$u = \int h(\eta) d\eta + k(\xi)$$
+
+<br>
+
+Entonces:
+
+$$k(\xi) = \int f(\xi) d\xi$$
+
+<br>
+
+$$g(\eta) = \int h(\eta) d\eta$$
+
+<br>
+
+Por lo tanto:
+
+$$u(\xi, \eta) = \int f(\xi) d\xi + \int h(\eta) d\eta$$
+
+## Clasificacion de las ecuaciones diferenciales parciales de segundo orden.
+
+### Forma canónica
+Consideremos a la forma canónica de las ecuaciones diferenciales parciales de segundo orden como la expresión más simple obtenida mediente una transformación de variables.
+Partimos de la expresión general de la ecuación diferencial de segundo orden:
+
+$$a_{11} u_{xx} + 2a_{12} u_{xy} + a_{22} u_{yy} + bu_x + cu_y + u = 0$$
+
+con $a_{11}, a_{12}, a_{22}, b, c$ no necesariamente constantes.
+
+Si se usa una trasformacion admisible de coordenadas: $\xi= \xi(x,y),  \eta=\eta(x,y)$ entonces las derivadas parciales en las nuevas varibles son:
+
+$$u_x=u_\xi \xi_x +u_\eta \eta_x$$
+
+$$u_{xx}= (u_{\xi\xi} \xi_x + u_{\xi\eta}\eta_x)\xi_x + u_\xi \xi_{xx} + (u_{\eta\xi} \xi_x + u_{\eta\eta}\eta_x)\eta_x + u_\eta \eta_{xx}$$
+
+$$=u_{\xi\xi}\xi_x^{2}+ 2u_{\eta\xi}\xi_x\eta_x+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{xx}+u_\eta\eta_{xx}$$
+
+$$u_y=u_\xi \xi_y+u_\eta\eta_y$$
+
+$$u_{yy}= (u_{\xi\xi} \xi_y + u_{\xi\eta}\eta_y)\xi_y + u_\xi \xi_{yy} + (u_{\eta\xi} \xi_y + u_{\eta\eta}\eta_y)\eta_y + u_\eta \eta_{yy}$$
+
+$$=u_{\xi\xi}\xi_y^{2}+ 2u_{\eta\xi}\xi_y\eta_y+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{yy}+u_\eta\eta_{yy}$$
+
+$$u_{xy}= \frac{\partial(u_\xi\xi_x +u_\eta \eta_x)}{\partial y} = (u_{\xi\xi}\xi_y + u_{\xi\eta} \eta_y) \xi_x + u_\xi \xi_{xy} + (u_{\eta\xi}\xi_y + u_{\eta\eta} \eta_y)\eta_x + u_\eta \eta_{xy}$$
+
+$$=u_{\xi\xi}\xi_y \xi_x + u_{\xi\eta} (\eta_y \xi_x + \eta_x \xi_y) + u_\xi \xi_{xy} + u_{\eta\eta}\eta_y\eta_x + u_\eta \eta_{xy}$$
+
+Al sustituir en la ecuación original, tenemos:
+
+$a_{11} (u_{\xi\xi}\xi_x^{2}+ 2u_{\eta\xi}\xi_x\eta_x+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{xx}+u_\eta\eta_{xx}) + 2a_{12} [u_{\xi\xi}\xi_y \xi_x + u_{\xi\eta} (\eta_y \xi_x + \eta_x \xi_y) + u_\xi \xi_{xy} + u_{\eta\eta}\eta_y\eta_x + u_\eta \eta_{xy}]+ a_{22} (u_{\xi\xi}\xi_y^{2}+ 2u_{\eta\xi}\xi_y\eta_y+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{yy}+u_\eta\eta_{yy}) + b(u_\xi\xi_x +u_\eta \eta_x) + c(u_\xi \xi_y+u_\eta\eta_y) + u = 0$
+
+Después de ordenar los términos se tiene. Sea:
+
+$\bar{a_{11}}:= a_{11}\xi_x^{2} + 2a_{12} \xi_x\xi_y+a_{22}\xi_y^{2}$
+
+$\bar{a_{12}}:= a_{11}\xi_x \eta_x + a_{12}(\xi_x\eta_y+ \eta_x \xi_y)+ a_{22}\xi_y\eta_y$
+
+$\bar{a_{11}}:= a_{11}\eta_x^{2} + 2a_{12} \eta_x\eta_y+a_{22}\eta_y^{2}$
+
+asi, obtenemos:
+
+$$\bar{a_{11}}u_{\xi\xi}+ 2\bar{a_{12}}u_{\xi\eta}+\bar{a_{22}}u_{\eta\eta}+ \bar{F}=0. $$
+
+En donde $\bar{F}$ no depende de las segundas derivadas.
+
+Ahora, escogemos las variables $\xi$ y $\eta$ de modo que el coeficiente $\bar{a_{11}}$ sea nulo, es decir:
+
+$$a_{11}\xi_x^{2} + 2a_{12} \xi_x\xi_y+a_{22}\xi_y^{2} = 0,$$
+
+en otras palabras, se elige \xi de tal forma que sea solución a la ecuacion diferencial parcial anterior.
+
+Para encontrar $\xi(x,y)$ es necesario demostrar algunos lemas: 
+
+Lema #1: si $z=\varphi(x,y)$ es una solución particular de la ecuación: 
+
+$$a_{11}z_x^{2} + 2a_{12} z_x z_y+a_{22}z_y^{2} = 0 ............(1)$$
+
+la relación $\varphi(x,y)=0$ es una integral general de la ecuación diferencial ordinaria:
+$$a_{11} (dy)^{2} + 2a_{12} dx dy+a_{22}(dx)^{2} = 0$$
+
+Demostración.
+Como $z=\varphi$ entonces $z_x=\varphi_x, z_y=\varphi_y$. Por lo cual (1) se escribe como:
+
+$$a_{11}\varphi_x^{2} + 2a_{12} \varphi_x \varphi_y+a_{22}\varphi_y^{2} = 0..............(2)$$
+
+Dividimos por $\varphi_y^{2}$:
+
+$$a_{11}(\frac{\varphi_x}{\varphi_y})^{2} + 2a_{12} (\frac{\varphi_x}{\varphi_y})+a_{22}= 0.............(3)$$
+
+Si además consideramos $\varphi(x,y)= cte$, es decir $d\varphi(x,y)= 0$ , $\varphi_x dx + \varphi_y dy =0, entonces:$
+
+$$\frac{\varphi_x}{\varphi_y}=-\frac{dy}{dx}$$
+
+Sustituyendo en (2):
+
+$$a_{11}(-\frac{dy}{dx})^{2} + 2a_{12} (-\frac{dy}{dx})+a_{22}= 0$$
+
+$$a_{11}(dy)^{2} - 2a_{12} dy dx+a_{22}(dx)^{2}= 0$$
+
+Como $\varphi(x,y)= cte$ entonces satisface la ecuación diferencial parcial (2). 
+
+
+
+### Forma canónica de las ecuaciones hiperbólicas
+
+Partimos del siguinete lema :  
+
+**Lema #2:** Si $\varphi(x,y) = C$ es una integral general de la ecuación
+diferencial ordinaria
+
+a)  $$a_{11}dy^2 - 2a_{12}dxdy + a_{22}dx^2 = 0$$
+
+entonces la función $z = \varphi(x,y)$ satisface la ecuación
+
+b)  $$a_{11} z_y^2 + 2a_{12} z_x z_y + a_{22} z_x^2 = 0$$
+
+**Demostración:** Consideremos una curva integral de (a) que pasa por el
+punto arbitrario $(x_0, y_0)$, además $\varphi(x,y) = C_0$ y $y_0= f(x,C_0)$.
+
+**Observación:** $y_0 = f(x_0, C_0)$ $\rightarrow$ Crea una restricción.
+
+Para todos los puntos en la curva, pediremos que se cumpla la siguiente
+relación:
+
+$$a_{11} \left( \frac{dy}{dx} \right)^2 - 2a_{12} \left( \frac{dy}{dx} \right) + a_{22} = a_{11} \left( -\frac{\varphi_x}{\varphi_y} \right)^2 - 2a_{12} \left( -\frac{\varphi_x}{\varphi_y} \right) + a_{22}$$
+
+es decir,
+
+$$a_{11} \left( \frac{\varphi_x}{\varphi_y} \right)^2 + 2a_{12} \frac{\varphi_x}{\varphi_y} + a_{22} = 0.$$
+
+
+Observación: A una ecuación D.P. le corresponde una ED Característica EDP → ED.
+
+Haciendo $x = x_0$  en la última relación se tiene:
+
+$$
+a_{11} \varphi^2_x(x_0, y_0) + 2 a_{12} \varphi_x(x_0, y_0) \varphi_y(x_0, y_0) + a_{22} \varphi^2_y(x_0, y_0) = 0
+$$
+
+$$
+a_{11} z^2_x(x_0, y_0) + 2 a_{12} z_x(x_0, y_0) z_y(x_0, y_0) + a_{22} z^2_y(x_0, y_0) = 0
+$$
+
+La ecuación $a_{11} dy^2 - 2 a_{12} dx \, dy + a_{22} dx^2 = 0$ se llama ecuación característica para la ecuación:
+
+$$
+a_{11} u_{xx} + 2 a_{12} u_{xy} + a_{22} u_{yy} + F_1(x, y, u, u_x, u_y) = 0
+$$
+
+y sus integrales características.
+
+Haciendo $\xi = \varphi(x, y)$ con $\varphi(x, y)= \text{cte}$ es una integral de la ecuación (a), el coeficiente de $u_{\xi\xi}$ se reduce a 0:
+
+$$
+\bar{a}_{11}= 0
+$$
+
+Si $\eta = \Psi(x, y)$ con $\Psi(x, y) = \text{cte}$ (diferente) se tiene otra integral general de la ecuación (a) independiente de $\varphi(x, y)$, de forma que se anulara también el coeficiente de $u_{\eta\eta}$ :
+
+$$
+\bar{a}_{22} = 0
+$$
+
+Las ecuaciones anteriores nos permiten encontrar dos expresiones de $\frac{dy}{dx}$:
+
+$$
+\frac{dy}{dx} = \frac{a_{12} + \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}}
+$$
+
+$$
+\frac{dy}{dx} = \frac{a_{12} - \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}}
+$$
+
+
+
+
+Sea $D = a_{12}^2 - a_{11} a_{22}$. El signo de D determina el tipo de
+ecuación: $$a_{11} u_{xx} + 2 a_{12} u_{xy} + a_{22} u_{yy}  = 0$$\
+La ecuación se llamará en el punto P en el que se evalúa D, como:
+
+-   Hiperbólica, si en el punto P se tiene $D > 0$.
+
+-   Elíptica, si en el punto P se tiene $D < 0$.
+
+-   Parabólica, si en el punto P se tiene $D = 0$.
+
+**Observaciones:**
+
+$$ \bar{a}_{12}^2 - \bar{a}_{11}\bar{a}_{22} = (a_{12}^2-a_{11}a_{22})(\xi_x \eta_y- \eta_x \xi_y)^2$$
+
+$$\begin{pmatrix}
+    \xi_{x} & \xi_{y} \\
+    \eta_{x} & \eta_{y}
+\end{pmatrix}=
+\begin{pmatrix}
+    \frac{\partial \xi}{\partial x} & \frac{\partial \xi}{\partial y}\\
+    \frac{\partial \eta}{\partial x} & \frac{\partial \eta}{\partial y}
+\end{pmatrix}$$
+
+*Es el jacobiano de la transformación de variables y tiene que ser
+diferente de cero.*
+
+Consideremos una región $\Omega$ de todos los puntos en la cual la
+ecuación es del mismo tipo. Para cada punto en $\Omega$ pasan dos
+características.\
+
+**Observación:** La cantidad $\xi_y$ $\eta_x$ - $\xi_x$ $\eta_y$ es el
+jacobiano de la transformación de variables y tiene que ser diferente de
+cero.
+
+
+Sus integrales generales $\varphi(x,y) = \text{cte}$ y $\Psi(x,y) = \text{cte}$ son constantes diferentes y determinan una familia de características. Se tiene:
+
+$$u_{\xi \eta} = \Phi \left( \xi, \eta, u, u_{\xi}, u_{\eta} \right)$$
+
+con
+
+$$\Phi = \frac{-F}{2a_{12}} \rightarrow \text{Forma canónica de  las  ecuaciones tipo hiperbólicas}$$
+
+\
+
+Por otro lado, existe una segunda forma canónica. Se hace
+$\xi = \alpha + \beta \text{ , } \eta = \alpha -\beta$, entonces: 
+$$\alpha = \frac{\xi+ \eta}{2} \text{ , } \beta = \frac{\xi - \eta}{2}$$
+
+Usamos $2 \bar{a}_{12} u_{\eta\xi}= -\bar{F}$, donde:
+$$\bar{a}_{12} = a_{11} \xi_x \eta_x + a_{12}(\xi_x\eta_y + \eta_x \xi_y ) + a_{22} \xi_y \eta_y $$
+
+Ahora se obtendran las derivadas parciales: 
+
+$$\xi_x = \frac{\partial\xi}{\partial x}= \frac{\partial}{\partial x}(\alpha +\beta) = \alpha_x + \beta_x$$
+
+$$\eta_x = \frac{\partial \eta}{\partial x} = \frac{\partial}{\partial x} (\alpha -\beta) =\alpha_x - \beta_x$$
+
+$$\xi_y =\alpha_y + \beta_y $$
+
+$$\eta_y = \alpha_y -\beta_y$$
+
+Por lo que: 
+
+$$\bar{a}_{12} = a_{11}(\alpha_x +\beta_x)(\alpha_x - \beta_x)+ a_{12}[(\alpha_x+ \beta_x)(\alpha_y-\beta_y)+(\alpha_x - \beta_x)(\alpha_y +\beta_y)]+ a_{22} (\alpha_y +\beta_y)(\alpha_y - \beta_y)$$
+
+$$=a_{11} (\alpha_x^2- \beta_x^2)+ a_{12} [\alpha_x \alpha_y - \alpha_x \beta_y+ \beta_x \alpha_y-\beta_x\beta_y+ \alpha_x\alpha_y+\alpha_x\beta_y-\beta_x\alpha_y-\beta_x\beta_y]+a_{22}(\alpha_y^2 - \beta_y^2)$$
+
+$$\bar{a}_{12} = a_{11}(\alpha_x^2 - \beta_x^2) + 2 a_{12} (\alpha_x\alpha_y-\beta_x\beta_y)+ a_{22} (\alpha_y^2-\beta_y^2)$$
+
+Además debemos encontrar $u_{\eta\xi}$ :
+
+$$u_\eta = u_\alpha \alpha_\eta + u_\beta \beta_\eta$$
+
+$$u_\eta = \frac{1}{2} (u_\alpha - u_\beta)$$
+
+$$ u_{\eta\xi} = \frac {1}{2} \Bigl(\frac {\partial u_\alpha }{\partial \xi}- \frac {\partial u_\beta }{\partial \xi}\Bigr)$$
+
+$$u_{\eta\xi} = \frac{1}{2}\Biggl[\Bigl(\frac{\partial u_\alpha}{\partial \alpha}\cdot \frac{\partial \alpha}{\partial \xi} +\frac{\partial u_\alpha}{\partial \beta}\cdot \frac{\partial \beta}{\partial\xi}\Bigr) - \Bigl(\frac{\partial u_\beta }{\partial\alpha} \cdot \frac{\partial \alpha }{\partial \xi}+ \frac{\partial u_\beta}{\partial \beta} \cdot \frac{\partial \beta}{\partial \xi}\Bigr)\Biggr]$$
+
+$$=\frac{1}{2} \Bigl[\frac{1}{2}u_{\alpha\alpha} + \frac{1}{2}u_{\alpha \beta} - \frac{1}{2} u_{\beta \alpha}- \frac{1}{2}u_{\beta\beta}\Bigr]$$
+
+$$= \frac{1}{4} (u_{\alpha\alpha}- u_{\beta\beta})$$
+
+Entonces: 
+
+$$2 \bar{a}_{12}u_{\eta \xi} =2 \bar{a}_{12} \frac{1}{4} \Bigl(u_{\alpha}-u_{\beta\beta} \Bigr) = - \bar{F}$$
+
+$$\therefore u_{\alpha \alpha}- u_{\beta\beta} = \frac {-2\bar{F}}{a_{12}} \rightarrow \text{Forma canónica 2}$$
+\
+
+### Forma canónica de las ecuaciones parabólicas
+
+Para este tipo de ecuaciones se tiene $D=0$, es decir: 
+$$a_{12}^2 - a_{11} a_{22}=0$$
+
+entonces $a_{12} = \sqrt{a_{11}} \sqrt{a_{22}}$ , además de la integral de la ecuación diferencial ordinaria $\xi = \varphi(x,y) \text{, } \eta = \Psi (x,y) \rightarrow \text{se obtendra del jacobiano.}$
+
+Observación:
+$$\bar{a_{11}} = a_{11} \xi_x^2+ 2a_{12} \xi_x\xi_y + a_{22} \xi_y^2$$
+
+$$= a_{11} \xi_x^2+ 2a_{12}\sqrt{a_{11}} \sqrt{a_{22}} \xi_x\xi_y + a_{22} \xi_y^2$$
+
+$$=(\sqrt{a_{11}}\xi_x + \sqrt{a_{22}}\xi_y)^2$$
+
+Esta cantidad debe de ser cero, ya que así lo hemos impuesto.
+
+Observación: 
+
+$$\bar{a}_{12}= a_{11} \xi_x \eta_x + a_{12} (\xi_x \eta_y + \xi_y \eta_x)+a_{22} \xi_y \eta_x$$
+
+$$\bar{a}_{12}= a_{11} \xi_x \eta_x +  \sqrt{a_{11}} \sqrt{a_{22}} (\xi_x \eta_y + \xi_y \eta_x)+a_{22} \xi_y \eta_x$$
+
+$$= \sqrt{a_{11}}\xi_x (\sqrt{a_{11} }\eta_x + \sqrt{a_{22}}\eta_y)+ \sqrt{a_{22}}\xi_y (\sqrt{a_{11} }\eta_x + \sqrt{a_{22}}\eta_y)$$
+
+$$(\sqrt{a_{11}}\xi_x +\sqrt{a_{22}}\xi_y)(\sqrt{a_{11} }\eta_x + \sqrt{a_{22}}\eta_y)=0$$
+
+Entonces $\bar{a}_{22} u_{\eta\eta} + \bar{F} =0$ con $\bar{a}_{22} \neq 0$.
+
+$$\therefore u_{\eta\eta} = - \frac{\bar{F}}{\bar{a}_{22}} \text{Forma canónica de las ecuaciones tipo parabólicas.}$$
+
+### Forma canónica de las ecuaciones elípticas
+
+Para este tipo de ecuaciones se tiene una forma compleja de $\frac{dy}{dx}$. Sea $\varphi(x,y)=cte$ una integral compleja de:
+
+$$\frac{dy}{dx} = \frac{a_{12}+\sqrt{a_{12}^{2}-a_{11}a_{22}}}{a_{11}}$$
+
+Entonces $\varphi^{*}(x,y)$ (la compleja conjugada de $\varphi(x,y)$), sera la integral comppleja de:
+
+$$\frac{dy}{dx} = \frac{a_{12}-\sqrt{a_{12}^{2}-a_{11}a_{22}}}{a_{11}}$$
+
+Sea $\xi=\varphi(x,y)$ y $\eta=\varphi^{*}(x,y)$ 
+
+Ahora bien, en las ecuaciones tipo elípticas se introducen las variables: 
+$$\alpha= \frac{\varphi+\varphi^{*}}{2}$$
+
+$$\beta=\frac{\varphi-\varphi^{*}}{2i}$$
+
+entonces:
+
+$$\xi=\alpha + i\beta$$
+
+$$\eta= \alpha-i\beta$$
+
+Además de cambiar la forma canónica de la ecuación tipo elíptica, nos evitaremos trabajar con cantidades complejas.
+
+Como antes, se exige que $\bar{a_{11}}=0$
+
+$$\bar{a}_{11}=a_{11}\xi_x^{2}+2a_{12}\xi_x\xi_y+a_{22}\xi_y^{2}$$
+
+$$=a_{11}(\alpha_x+ i\beta_x)^{2} +2a_{12}(\alpha_x+ i\beta_x)(\alpha_y+ i\beta_y)+a_{22}(\alpha_y+ i\beta_y)^{2}$$
+
+$$=a_{11}\alpha_x^{2}+2a_{11}\alpha_x i\beta_x-a_{11}\beta_x^{2}+2a_{12}(\alpha_x \alpha_y + \alpha_x i \beta_y+ i \beta_x \alpha_y + i^{2} \beta_y \beta_x)+a_{22}\alpha_y^{2}+ 2a_{22}\alpha_y i \beta_y - a_{22}\beta_y^2$$
+
+$$=(a_{11} \alpha_x^2+ 2a_{12}\alpha_x \alpha_y + a_{22} \alpha_y^2) - (a_{11} \beta_x^2+ 2a_{12}\beta_x \beta_y + a_{22} \beta_y^2)+ 2i\Bigr[a_{11}\alpha_x \beta_x + a_{12} (\alpha_x \beta_y+ \beta_x \alpha_y)+ a_{22}\alpha_y\beta_y \Bigl]$$
+
+Por otro lado,
+$$\bar{a}_{22}=a_{11}\eta_x^{2}+2a_{12}\eta_x\eta_y+a_{22}\eta_y^{2}$$
+
+$$=a_{11}(\alpha_x- i\beta_x)^{2} +2a_{12}(\alpha_x- i\beta_x)(\alpha_y- i\beta_y)+a_{22}(\alpha_y- i\beta_y)^{2}$$
+
+$$=(a_{11} \alpha_x^2+ 2a_{12}\alpha_x \alpha_y + a_{22} \alpha_y^2) - (a_{11} \beta_x^2+ 2a_{12}\beta_x \beta_y + a_{22} \beta_y^2)- 2i\Bigr[a_{11}\alpha_x \beta_x + a_{12} (\alpha_x \beta_y+ \beta_x \alpha_y)+ a_{22}\alpha_y\beta_y \Bigl]$$
+
+Como $\bar{a}_{11}=0$ entonces:
+
+$$a_{11} \alpha_x^2+ 2a_{12}\alpha_x \alpha_y + a_{22} \alpha_y^2 = a_{11} \beta_x^2+ 2a_{12}\beta_x \beta_y + a_{22} \beta_y^2$$
+
+Además
+
+$$a_{11}\alpha_x \beta_x + a_{12} (\alpha_x \beta_y+ \beta_x \alpha_y)+ a_{22}\alpha_y\beta_y=0$$
+
+Con este resultado se tiene que $\bar{a}_{11} = \bar{a}_{22}=0$. Por lo cual, la forma general de las ecuaciones diferenciales parciales de segundo orden se reduce a:
+
+$$2 \bar{a}_{12}u_{\xi\eta}+\bar{F}=0$$
+
+$$\therefore u_{\xi\eta}= -\frac{\bar{F}}{2\bar{a}_{12}}\rightarrow \text{Forma canónica de las ecuaciones elípticas}$$
+
+Existe una segunda forma canónica. Se hace
+$\xi = \alpha + i\beta \text{ , } \eta = \alpha - i\beta$, entonces: 
+$$\alpha = \frac{\xi+ \eta}{2} \text{ , } \beta = \frac{\eta - \xi}{2} i$$
+
+Usamos $2 \bar{a}_{12}u_{\xi\eta}+\bar{F}=0$, donde:
+$$\bar{a}_{12} = a_{11} \xi_x \eta_x + a_{12}(\xi_x\eta_y + \eta_x \xi_y ) + a_{22} \xi_y \eta_y $$
+
+Ahora se obtendran las derivadas parciales: 
+
+$$u_\xi = u_\alpha \alpha_\xi + u_\beta \beta_\xi$$
+
+$$= \frac{1}{2}u_\alpha - \frac{1}{2} i u_\beta = \frac{1}{2}\Bigr[u_\alpha - i u_\beta \Bigr]$$
+
+por lo que,
+
+$$u_{\xi \eta}= \frac{1}{2}\Bigr[u_{\alpha\alpha} \alpha_\eta+ u_{\alpha \beta} \beta_\eta- i (u_{\beta\alpha}\alpha_\eta+ u_{\beta \beta} \beta_\eta) \Bigr]$$
+
+$$= \frac{1}{2}\Bigr[\frac{1}{2} u_{\alpha\alpha} + \frac{i}{2}u_{\alpha \beta} - i \Bigl(\frac{1}{2}u_{\beta\alpha}+ \frac{i}{2}u_{\beta \beta} \Bigr) \Bigr]$$
+
+$$=\frac{1}{4} (u_{\alpha\alpha} + u_{\beta\beta})$$
+
+Entonces: 
+
+$$2 \bar{a}_{12}u_{\xi\eta} = \frac{1}{2}\bar{a}_{12}(u_{\alpha\alpha} + u_{\beta\beta}) = - \bar{F}$$
+
+$$\therefore u_{\alpha\alpha} + u_{\beta\beta}= -\frac{2\bar{F}}{\bar{a}_{12}} \rightarrow \text{Forma canónica 2}$$
+
+
+## Rectas Características
+
+Recordando la ecuación característica:
+
+$$a_{11} \frac{dy}{dz} + 2a_{12} \frac{dy}{dx} + a_{22} \frac{dz}{dx} = 0$$
+
+La cual se puede escribir como:
+
+$$a_{11} \left( \frac{dy}{dz} \right)^2 - 2 a_{12} \frac{dy}{dx} + a_{22} = \lambda_2$$
+
+Cuyas soluciones son :
+
+$$
+\frac{dy}{dx} = \frac{a_{12} + \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}} = \lambda_1
+$$
+
+$$
+\frac{dy}{dx} = \frac{a_{12} - \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}} = \lambda_2
+$$
+
+Sabemos que:
+
+$$\frac{dy}{dx} = \lambda_1$$
+
+$$y = \lambda_1 x + c_1 \quad \text{con} \quad c_1 = \text{cte}$$
+
+De igual manera:
+
+$$y = \lambda_2 x + c_2 \quad \text{con} \quad c_2 = \text{cte}$$
+
+Estas relaciones se consideran como rectas ecuacionales, junto con el
+lema #2 se tiene la función $\varphi(x, y) = c$ tal que permite encontrar
+la forma canónica.
+
+Por lo tanto, $$y - \lambda_1 x = \varphi(x,y) = \xi$$
+$$y - \lambda_2 x = \Psi(x,y) = \eta$$
+
+**Obs.:** Cuando se trabaje con ecuaciones tipo elípticas:
+
+$$\frac{dy}{dx} = z_{x} \quad \rightarrow \text{número complejo}$$
+
+$$\frac{dy}{dx} = z^{*}_{x} \quad \rightarrow \text{complejo conjugado}$$
+
+Donde:
+
+$a)$
+$$y = z_x + \xi =  z_x + (\alpha + i\beta)$$
+
+$b)$
+$$y = z^{*}_{x} + \eta = z^{*}_{x}+ (\alpha - i\beta)$$
+
+Sumando $a)$ y $b)$
+
+$$2y = (z_x + z^*_x) x + 2\alpha$$
+
+$$2y = 2{Re}(z_x) x + 2\alpha$$
+
+$$y = {Re}(z_x) x + \alpha$$
+
+$$\alpha= y - {Re}(z_x) x$$
+
+Restando $a)$ y $b)$ 
+
+$$0=(z-z^*)x + 2i\beta$$
+
+$$0=2i Im(z) x + 2i\beta$$
+
+$$\beta =- Im(z) x$$
+
+Por otro lado, para las ecuaciones para se tiene:
+
+$$
+\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}} = \lambda
+$$
+
+Sabemos que $a_{12}^2 - a_{11} a_{22}=0$ . Por lo que:
+
+$$\frac{dy}{dx} = \frac{a_{12}}{a_{11}} = \lambda$$
+
+$$y= \lambda x +c $$
+
+con $c$ constante. O bien:
+
+$$\xi = y-\lambda x$$
+
+Para obtener el valor de $\eta$ partiremos del jacobiano:
+
+$$\xi_x \eta_y - \xi_y \eta_x  \neq 0$$
+
+$$-\lambda \eta_y - \eta_x \neq 0$$
+
+$$\lambda \eta_y + \eta_x \neq 0$$
+
+Supongamos que $\lambda \eta_y =0$ entonces:
+
+$$\eta_x \neq 0$$
+
+$$\therefore \eta= c' x$$
+
+con $c'$ constante diferente de 0. 
+
+
+
+## Función $v(x,y) = u(x,y) e^{\lambda x + \mu y}$
+
+Esta función nos ayudara a simplificar la forma canónica de las ecuaciones diferenciales parciales. 
+Para ello se tienen que eligir apropiadamente los parametros $\lambda$ y $\mu$ para simplificar.
+
+Ecuación canónica a reducir $\rightarrow$ $u_{xx}+u_{yy}+\alpha u_x+ \beta u_y + \gamma u = 0$ 
+
+Procedemos a realizar una transformación considerando que:
+$$v = u e^{\lambda x + \mu y}$$
+por ende:
+$$u= v e^{-(\lambda x + \mu y)}$$
+
+Ahora obtenemos las derivadas necesarias:
+$$u_x=v_x e^{-(\lambda x + \mu y)} - \lambda ve^{-(\lambda x + \mu y)} = (v_x - \lambda v )e^{-(\lambda x + \mu y)} $$
+$$u_{xx}= -\lambda (v_x-\lambda v) e^{-(\lambda x + \mu y)} + (v_{xx}- \lambda v_x)e^{-(\lambda x + \mu y)}$$
+
+Tomando $g=e^{-(\lambda x + \mu y)}$ entoces $g_x = -\lambda g$ y $g_y = -\mu g$ y nuestras derivadas quedan como:
+$$u_x= (v_x -\lambda v) g$$
+$$u_{xx} = (v_{xx}-2\lambda v_x + \lambda ^2 v) g$$
+$$u_y = (v g)_y = v_y g + g_y v = v_y g - \mu g v= (v_y -\mu v) g$$
+$$u_{yy}= (v_y - \mu v)_y g + g_y (v_y - \mu v)= (v_{yy}- \mu v_y) g + g_y (v_y - \mu  v)$$
+$$=(v_{yy}- \mu v_y) g - \mu g (v_y - \mu v)= (u_{yy} - 2u v_y + u^2 v)g$$
+
+Sustituyendo las derivadas encontradas en la ecuación original $u_{xx}+u_{yy}+\alpha u_x +\beta_y+\gamma u = 0$, obtenemos:
+
+$$(v_{xx} - 2\lambda v_x + \lambda^2 v) g + (v_{yy} - 2\mu v_y + \mu^2 v) g + \alpha (v_x -\lambda v)g +  \beta (v_y- \mu v) g + \gamma v g = 0 $$
+
+$$v_{xx} g + v_{yy} g + (\alpha - 2\lambda) v_x g + (\beta -2 \mu) v_y  g+  (\mu^2+ \lambda^2 -\lambda\alpha-\mu\beta+ \gamma)gv=0$$
+\
+Podemos dividir todo por g, ya que $g=e^{-(\lambda x +\mu y)}\neq 0$, por ende:
+$$v_{xx}  + v_{yy}  + (\alpha - 2\lambda) v_x + (\beta -2 \mu) v_y  +  (\mu^2+ \lambda^2 -\lambda\alpha-\mu\beta+ \gamma)v=0$$
+\
+Si tomamos $\lambda= \frac{\alpha}{2}$ y $\mu=\frac{\beta}{2}$ los términos de $v_x$ y $v_y$ se cancelan
+$$v_{xx}+v_{yy}+(\frac{\beta^2}{4}+\frac{\alpha^2}{4}-\frac{\alpha^2}{2}-\frac{\beta^2}{2}+\gamma)v=0$$ 
+$$\therefore v_{xx}+v_{yy}+(\gamma- \frac{\beta^2}{4}-\frac{\alpha^2}{2})v=0$$
+

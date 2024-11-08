@@ -1,0 +1,178 @@
+# Ecuaciones diferenciales de segundo orden
+
+## Ecuación de onda
+
+Consideremos una cuerda con los extremos fijos. La cuerda se deforma al aplicarle una fuerza externa en el punto intermedio.
+
+Cada elemento de la cuerda está sometido a una fuerza tangencial T, la cual es función de la posición y el tiempo: $T(x,t)$
+
+¿Podemos enctontrar la ecuación que satisface $T(x,t)$? Si 
+
+La fuerza vertical que actúa sobre el elemento de línea de longitud $\triangle l$ está dada por:
+$$T_y= Tsen \alpha$$
+La cual genera un desplazamiento $\triangle y(x,t)$
+Sabemos que para $\alpha \ll 1 \approx \tan \alpha=\frac{\triangle y}{\triangle x} $ y en el límite $\triangle x \rightarrow 0$ se tiene:
+$$\sin \alpha= \frac{\partial y}{\partial x}$$
+
+Ahora bien opr convención se usará la notación $y_{,x}= \frac{\partial y}{\partial x}$
+
+Entonce la fuerza vertical se escribe como: 
+
+$T_y =T y_{,x} \leftarrow$ Ecuación 1
+
+Por otro lado $\triangle l$ satisface la segunda ley de Newton en el movimiento vertical
+
+$$\frac{dp}{dt}=F$$
+
+con F la fuerza total a lo largo del eje $y$ , la cual esta dada como: 
+
+$$F=T_y(x_2)-T_y(x_1)$$
+
+Así que 
+
+$$\frac{dp}{dt} = T_y(x_2)-T_y(x_1)$$
+
+Integrando respecto a $t$:
+$$\triangle p = \int_{t_1}^{t_2} [T_y(x_2)-T_y(x_1)]dt \rightarrow Ecuación \space 2$$
+
+Sustituyendo $(1)$ en $(2)$
+$$\triangle p = \int_{t_1}^{t_2} [Ty_{,x}(x_2)-Ty_{,x}(x_1)]dt$$
+
+con T constante.
+
+$$\triangle p = T \int_{t_1}^{t_2} [y_{,x}(x_2)-y_{,x}(x_1)]dt$$
+$$= T \int_{t_1}^{t_2} {[y_{,x}(x_2,t)-y_{,x}(x_1,t)]}dt$$
+
+Usando el teorema del valor medio para derivadas: 
+$$\frac{dy}{dx}= \lim _{\triangle x \rightarrow 0} \frac{y(x+\triangle x)-y(x)}{\triangle x}$$
+$$y(x+\triangle x)-y(x)= \frac{dy(x^{'})}{dx}\triangle x, x^{'}\in (x, x+\triangle x)$$
+
+$$\triangle p = T \int_{t_1}^{t_2}{[\frac{\partial}{\partial x}(y_{,x}(x_3, t))\triangle x ]}dt$$
+con $x_3 \in (x_1,x_2)$.
+
+$$\triangle p = T \int_{t_1}^{t_2} [y_{,xx}(x_3,t)\triangle x] dt$$
+
+Finalmente se aplica el teorema del valor medio para integrales: 
+
+$$\triangle p = T \int_{t_1}^{t_2} {\int_{x_1}^{x_2}[y_{,xx}(x^{'},t)dx^{'}]} dt$$
+
+Por otro lado, se tiene:
+
+$$\triangle p= m\triangle v= m(v(t_2)-v(t_1))= m(y_{,t}(t_2)-y_{,t}(t_1))$$
+
+Además 
+$$dm=\lambda(x) dx$$
+donde $\lambda(x)$ es la densidad lineal de masa.
+
+Entonces:
+$$\triangle p = \int_{x_1}^{x_2} \lambda(x) (y_{,t}(t_2)-y_{,t}(t_1))dx$$
+
+Aplicando el teorema del valor medio para derivadas 
+
+$$\triangle p= \int_{x_1}^{x_2} \lambda(x) {\frac{\partial}{\partial t}(y_{,t}(x,t_3))\triangle t} dx$$
+con $t \in (t_1,t_2)$.
+
+$$ \triangle p = \int_{x_1}^{x_2} \lambda(x) {y_{,tt}(x,t_3) \triangle t} dx$$
+
+Usando el teorema del valor medio para integrales
+
+$$ \triangle p = \int_{x_1}^{x_2} \lambda(x) {\int_{t_1}^{t_2}y_{,tt}(x,t^{'}) dt^{'}} dx$$
+
+Con base en la ecuación obtenida previamente: 
+
+$$\triangle p = T \int_{t_1}^{t_2} \int_{x_1}^{x_2}[y_{,xx}(x^{'},t)dx^{'}] dt$$
+
+Al igualar los resultados para $\triangle p$ :
+
+$$T y_{,xx}(x,t)=\lambda(x)y_{,tt}(x,t)$$
+
+definiendo: 
+$$u:= \sqrt{\frac{T}{\lambda(x)}}$$
+
+$$y_{,xx}= \frac{\lambda(x)}{T}y_{,tt}$$
+
+O bien:
+
+$$y_{,xx}=\frac{1}{\frac{T}{\lambda(x)}}y_{,tt}$$
+
+Es decir:
+
+$$y_{,xx}= \frac{1}{u^2}y_{,tt} $$ 
+Ecuación de onda con $u$ la velocidad de la onda.
+
+## Ecuación de calor 
+
+Consideremos una barra lineal, con sus extremos sometidos a diferentes termperaturas. 
+Debido a la diferencia de temperaturas el calor se propaga del punto de mayor a menor temperatura, es decir, el sistema trata de alcanzar el equilibrio termodinámico.
+
+### Primer modelo
+
+Nuestro modelo debe de satisfacer:
+
+$$T(x=0)=T_1$$
+$$T(x=l)=T_2$$
+
+Entonces podemos suponer un modelo lineal:
+$$T(x)= \frac{T_2 - T_1}{l} x + T_1$$
+con x $\in [0,l]$. O bien :
+
+$$T(x)= \frac{T_2 - T_1}{x_2 - x_1} (x-x_1) + T_1$$
+con $x\in [x_1 , x_2]$.
+
+
+### Segundo modelo
+
+Un modelo más sofistidado debe de contemplar lo siguiente:
+
+* Debe ser proporcional a la diferencia de temperaturas:
+$$\frac{\triangle Q(t, x)}{\triangle t} \propto -\triangle T(t,x)$$
+
+* Debe ser proporcional al área de la sección transversal ($A$) de la barra
+$$\frac{\triangle Q(t, x)}{\triangle t} \propto A$$
+
+* Debe de ser proporcional a la propiedad de conducción de calor del material de la barra, $\kappa$:
+$$\frac{\triangle Q(t, x)}{\triangle t} \propto \kappa$$
+
+* Debe de ser inversamente proporcional a la longitud de la barra:
+$$\frac{\triangle Q(t, x)}{\triangle t} \propto \frac{1}{\triangle x}$$
+
+Así que: 
+$$\frac{\triangle Q(t, x)}{\triangle t} = - \frac {\kappa A \triangle T(t,x)}{\triangle x}$$
+
+O bien : 
+
+$$\triangle Q_{,t}(t, x) = - \kappa A  T_{,x}(t,x)$$
+
+Haciendo un desarrollo de Taylor de  $Q_{,t}(t, x)$ en $x+\triangle x$ :
+
+$$Q_{,t}(t,x+\triangle x)= Q_{,t}(t,x)+\frac{\partial}{\partial x}[Q_{,t}(t,x)]\triangle x$$
+
+$$= Q_{,t}(t,x)-\kappa A\frac{\partial}{\partial x}[T_{,x}(t,x)]\triangle x$$
+$$= Q_{,t}(t,x)-\kappa AT_{,xx}(t,x)\triangle x$$
+
+$$Q_{,t}(t,x+\triangle x)- Q_{,t}(t,x)= -\kappa AT_{,xx}(t,x)\triangle x$$
+
+$$\triangle Q_{,t}= -\kappa AT_{,xx}(t,x)\triangle x$$
+
+Para continuar, usaremos la primera ley de la termodinámica en este sistema:
+$$\triangle U = \triangle Q$$
+con $\triangle U = mC_e T(t,x)$
+donde $C_e$ es el calor específico.
+
+Al combinar estas ecuaciones podemos escribir: 
+$$\triangle Q_{,t} = mC_e T_{,t} (t,x)$$
+
+Si consideramos que la masa $m$ del segmento de la barra se puede colocar en función de su densidad de masa $\rho$ (constante):
+$$\triangle Q_{,t} = {m}C_e T_{,t} (t,x)= {\rho A\triangle x} C_e T_{,t} (t,x)$$
+
+Entonces, igualando las expresiones para $\triangle Q_{,t}$ tenemos: 
+
+$$\rho A\triangle x C_e T_{,t} (t,x) = -\kappa AT_{,xx}(t,x)\triangle x$$
+Simplificando: 
+
+$$\rho  C_e T_{,t} (t,x) = -\kappa T_{,xx}(t,x)$$
+
+Sea $\alpha := \frac{\kappa}{\rho C_e}$ entonces:
+
+$$T_{,t} (t,x) = -\alpha T_{,xx}(t,x) \rightarrow \text{Ecuación de calor}$$
+

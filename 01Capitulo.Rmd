@@ -195,31 +195,43 @@ Para encontrar $\xi(x,y)$ es necesario demostrar algunos lemas:
 
 Lema #1: si $z=\varphi(x,y)$ es una solución particular de la ecuación: 
 
-$$a_{11}z_x^{2} + 2a_{12} z_x z_y+a_{22}z_y^{2} = 0 ............(1)$$
+\begin{equation} 
+  a_{11}z_x^{2} + 2a_{12} z_x z_y+a_{22}z_y^{2} = 0
+  (\#eq:lemau)
+\end{equation} 
+
+
 
 la relación $\varphi(x,y)=0$ es una integral general de la ecuación diferencial ordinaria:
 $$a_{11} (dy)^{2} + 2a_{12} dx dy+a_{22}(dx)^{2} = 0$$
 
 Demostración.
-Como $z=\varphi$ entonces $z_x=\varphi_x, z_y=\varphi_y$. Por lo cual (1) se escribe como:
+Como $z=\varphi$ entonces $z_x=\varphi_x, z_y=\varphi_y$. Por lo cual \@ref(eq:lemau) se escribe como:
 
-$$a_{11}\varphi_x^{2} + 2a_{12} \varphi_x \varphi_y+a_{22}\varphi_y^{2} = 0..............(2)$$
+\begin{equation} 
+  a_{11}\varphi_x^{2} + 2a_{12} \varphi_x \varphi_y+a_{22}\varphi_y^{2} = 0
+  (\#eq:lemaun)
+\end{equation}
 
 Dividimos por $\varphi_y^{2}$:
 
-$$a_{11}(\frac{\varphi_x}{\varphi_y})^{2} + 2a_{12} (\frac{\varphi_x}{\varphi_y})+a_{22}= 0.............(3)$$
+\begin{equation} 
+  a_{11}(\frac{\varphi_x}{\varphi_y})^{2} + 2a_{12} (\frac{\varphi_x}{\varphi_y})+a_{22}= 0
+  (\#eq:lemauno)
+\end{equation} 
+
 
 Si además consideramos $\varphi(x,y)= cte$, es decir $d\varphi(x,y)= 0$ , $\varphi_x dx + \varphi_y dy =0, entonces:$
 
 $$\frac{\varphi_x}{\varphi_y}=-\frac{dy}{dx}$$
 
-Sustituyendo en (2):
+Sustituyendo en \@ref(eq:lemauno):
 
 $$a_{11}(-\frac{dy}{dx})^{2} + 2a_{12} (-\frac{dy}{dx})+a_{22}= 0$$
 
 $$a_{11}(dy)^{2} - 2a_{12} dy dx+a_{22}(dx)^{2}= 0$$
 
-Como $\varphi(x,y)= cte$ entonces satisface la ecuación diferencial parcial (2). 
+Como $\varphi(x,y)= cte$ entonces satisface la ecuación diferencial parcial \@ref(eq:lemaun). 
 
 
 

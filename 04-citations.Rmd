@@ -4,14 +4,13 @@
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k} (\#eq:hola)
 \end{equation}
 
-```{theorem}
-Sea $v(x_1, x_2,..., x_n, u)$ solución de la ecuación \@ref(eq:cuas) y suponer que en la región $\omega$ de las $variables x_1, x_2,...,x_n$ la ecuación $v(x_1, x_2,...,x_n,u)=0$ define la función: 
+\begin{align}
+y^2 - z^2 &= 1 \\
++
+(x + z &= 2)
+\end{align}
 
-$$u= \varphi(x_1, x_2,..., x_n)$$ 
-
-tal que $\frac{\partial v}{\partial u} \bigg|_{u=\varphi} \neq 0$ $\forall (x_1, x_2,...,x_n) \in \omega$.
-
-Entonces $u= \varphi(x_1, x_2,..., x_n)$ es solución de \@ref(eq:cuasi)
+$$x+z+y^2+z^2=3$$
 
 ```
 ## Footnotes

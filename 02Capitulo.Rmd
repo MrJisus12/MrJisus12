@@ -542,15 +542,188 @@ Si empleamos que $\frac{\partial v}{\partial u}\big|_{u=\varphi}\neq 0$ entonces
 
 Partiendo de \@ref(eq:cuasi) y usando la expresión \@ref(eq:t)
 
+$$\sum_{i=1}^{n} A_i(x_1, x_2,...,x_n, u) \frac{\partial u}{\partial x_i}=-\sum_{i=1}^{n}A_i(x_1, x_2,...,x_n, u)  \cdot \frac{\frac{\partial v}{\partial x_i}}{\frac{\partial v}{\partial u}\big|_{u=\varphi}} $$
+
+$$=-\sum_{i=1}^{n}A_i(x_1, x_2,...,x_n, u)  \frac{\partial v}{\partial x_i} \cdot\frac{1}{\frac{\partial v}{\partial u}\big|_{u=\varphi}} $$
+
+De acurdo a \@ref(eq:cuas)
+
+$$\sum_{i=1}^{n} A_i(x_1, x_2,...,x_n, u)\frac{\partial v}{\partial x_i}= -A(x_1, x_2,...,x_n, u) \frac{\partial v}{\partial u} \bigg|_{u=\varphi}$$
+
+Entonces:
+
+$$\sum_{i=1}^{n} A_i(x_1, x_2,...,x_n, u) \frac{\partial u}{\partial x_i}=- \biggl(-A(x_1, x_2,...,x_n, u) \frac{\partial v}{\partial u} \bigg|_{u=\varphi}\biggr) \cdot \frac{1}{\frac{\partial v}{\partial u}\big|_{u=\varphi}} $$
+
+$$=A(x_1, x_2,...,x_n, u)$$
+
+Entonces el estudio realizado para las EDP lineales se puede emplear paras las EDP cuasilineales. El sistema de las curvas caracteristicas ahora es: 
+
+$$\frac{dx_1}{A_1}=\frac{dx_2}{A_2}= \cdot \cdot \cdot =\frac{dx_n}{A_n}= \frac{du}{A}$$
+
+Donde las cantidades $A_i$ , $A$ son constantes en $\Omega$ y no son cero simultáneamente en puntos de $\Omega$
+
+**Observación 1:**
+A diferencia de las EDP lineales, las curvas características no estan en el espacio $(x_1,x_2,...,x_n)$ sino en el espacio $(x_1, x_2,...,x_n,u)$
+
+**Observación 2:**
+Cada superficie integral $u(x_1,x_2,...,x_n)$ de la EDP cuasilineal está constituida por curvas caracteristica. Por esto es que $u$ se construye de "pegar" curvas caracteristicas.
+
+**Observación 3:**
+De la EDP \@ref(eq:cuasi) observamos que el vector $(\nabla u, -1)$ es ortogonal al vector $(A_1, A_2, ..., A_n , A)$. Es decir:
+$$A_1 \frac{\partial u}{\partial x_1}+ A_2\frac{\partial u}{\partial x_2}+ \cdot \cdot \cdot +  A_n\frac{\partial u}{\partial x_n}-A=0$$
+
+**Ejemplo 1:**
+
+Encontrar la ecuación de la superficie que satisface la EDP cuasilineal de primer orden: $4yz \frac{\partial z}{\partial x}+\frac{\partial z}{\partial y}+2y=0$ la cual pasa a travez de la elipse $y^2+z^2=1$ , $x+z=2$.
+
+*Solución:*
+Escribimos las ecuaciones que definen las curvas caracteristicas de la forma general de la EDP $A_1 \frac{\partial u}{\partial x_1} + A_2 \frac{\partial u}{\partial x_2}=A$ ,  además:
+$$\frac{dx_1}{A_1}=\frac{dx_2}{A_2}=\frac{du}{A}$$
+
+Para nuestro caso: 
+$$x_1 = x | A_1=4yz$$
+$$x_2 = y | A_2=1$$
+$$u = z | A=-2y$$
+
+Las relaciones que definen las curvas caracteristicas son: 
+$$\frac{dx}{4yz}=\frac{dy}{1}=-\frac{dz}{2y}$$
+
+Podemos trabajar con : 
+$$dy = - \frac{dz}{2y} \text{ , } \frac{dx}{4yz}=-\frac{dz}{2y}$$
+
+Integrando, tenemos:
+
+$$-\int 2y dy = \int dz$$
+$$-y^2+c=z$$
+$$c=z+y^2$$
+con $c$ constante. También se tiene:
+$$dx=-2z dz$$
+$$x= -z^2+c_2$$
+$$c_2 =x+z^2$$
+con $c_2$ constante.
+
+Entonces la solución está dada por $\varphi(z+y^2,x+z^2)=0$
+
+Al sumar  $y^2 - z^2 = 1$ y $x + z = 2$ se obtiene:
+ 
+$$x+z+y^2+z^2=3$$
+
+Mientras que al sumar $c=z+y^2$ con $c_2 =x+z^2$, tenemos:
+
+$$x+z+y^2+z^2=c+c_2$$
+
+Entonces $c+c_2=3$
+
+De esta forma: $x+z+y^2+z^2=3$
+
+$\therefore x+z+y^2+z^2-3=0$ es solución de la ecuación.
+
+
+**Ejemplo 2:**
+
+Considerar la EDP cuasilineal de primer orden:
+$$x \frac{\partial u}{\partial x}+ y\frac{\partial u}{\partial y} = u- x^2-y^2$$
+Encontrar:
+* La solución general de esta ecuación.
+* La integral de Cauchy a travez de la curva $x=1$ , $u=y^2+2y-1$
+  
+*Solución:*
+$$\frac{dx}{x}=\frac{dy}{y}=\frac{du}{u-x^2-y^2}$$
+
+Primero resolvemos $\frac{dx}{x}=\frac{dy}{y}$:
+
+\begin{equation} 
+  x=c_3y
+  (\#eq:Ejemplo21)
+\end{equation} 
+
+$$c_3=\frac{x}{y}$$
+con $c_3$ constante.
+
+Ahora resolvemos: $\frac{dy}{y}=\frac{du}{u-x^2-y^2}$ :
+
+Sea $r=x^2+y^2$ y usando la ecuación \@ref(eq:Ejemplo21), entonces:
+$$r=y^2(c^2+1)$$
+
+Por lo cual,
+
+$$\frac{du}{dy}=\frac{u-x^2-y^2}{y} = \frac{1}{y}(u-r)=\frac{r}{y} \biggl[\biggl(\frac{u}{r}\biggr)-1\biggr]$$
+
+Sea $v=\frac{u}{r} \Longrightarrow u=vr \Longrightarrow \frac{du}{dy}=\frac{r}{y} (v-1)$
+
+Por otro lado $dr=2y(c^2+1)dy$ o bien $dy=\frac{1}{2y(c^2+1)}dr$ , así:
+$$\frac{du}{dy}=\frac{d}{dy}(vr) =2y(c^2+1)\frac{d}{dr}(vr) = 2y(c^2+1)(v+r\frac{dv}{dr})$$
+
+Igualamos las expresiones encontradas para $\frac{du}{dy}$
+
+$$\frac{r}{y}(v-1)=2y(c^2+1)(v+ r\frac{dv}{dr})$$
+
+Como $r= y^2(c^2+1)$ entonces:
+$$\frac{y^2(c^2+1)}{y}(v-1)=2y(c^2+1)(v+r\frac{dv}{dr})$$
+$$(v-1)=2(v+r\frac{dv}{dr})$$
+
+$$v-1= 2v+2r\frac{dv}{dr}$$
+$$-(v+1)=2r \frac{dv}{dr}$$
+$$-\frac{dr}{r}=2\frac{dv}{1+v}$$
+
+Integrando
+$$-\ln|r| = 2\ln|1+v|+\ln|\mu|$$
+con $\mu$ constante. Es decir:
+
+$$- \frac{1}{2} \ln|r|-\ln|1+v|=\frac{1}{2}\ln|\mu|$$
+
+$$-\biggl(\ln|r^{\frac{1}{2}}| + \ln|1+v|\biggr)= \ln|\mu^{\frac{1}{2}}|$$
+$$\nu:=\mu^{\frac{1}{2}}$$
+
+$$-\ln|r^\frac{1}{2}(1+v)|=\ln|\nu|$$
+$$\Longrightarrow \frac{1}{r^\frac{1}{2}}(1+v)= \nu \Longrightarrow \frac{1}{r^\frac{1}{2}}=\nu (1+v)$$
+$$\frac{1}{r^\frac{1}{2}}-\nu=v\nu$$
+
+$$v=\frac{1}{\nu r^\frac{1}{2}}-1$$
+$$\Longrightarrow \frac{u}{r}=\frac{1}{\nu r^\frac{1}{2}}-1$$
+$$u=\frac{r^\frac{1}{2}}{\nu}-r$$
+
+Sea $a=\frac{1}{\nu}$ entonces:
+$$u=ar^\frac{1}{2}-r$$
+
+Usando la definición de r:
+$$u=a \sqrt{x^2+y^2}-(x^2+y^2)$$
+$$a=\varphi\biggl(\frac{x}{y}\biggr)$$
+$$\Longrightarrow u=\varphi\biggl(\frac{x}{y}\biggr) \sqrt{x^2+y^2}-(x^2+y^2)$$
+
+Usando las condiciones de Cauchy, tenemos:
+$$u(x=1,y)=\varphi\biggl(\frac{1}{y}\biggr) \sqrt{1+y^2}-(1+y^2)$$
+
+y con base en la segundo condición: $u(x=1,y) = -y^2+2y-1$. Al igualar las ecuaciones, se obtiene:
+
+$$\varphi \bigg(\frac{1}{y}\bigg)\sqrt{1-y^2}-1-y^2=-y^2+2y-1$$
+$$\varphi \biggl(\frac{1}{y}\biggr)\sqrt{1+y^2}=2y$$
+$$\varphi \biggl(\frac{1}{y}\biggr)=\frac{2y}{\sqrt{1+y^2}}$$
+
+Lo cual implica que: 
+$$\varphi\biggl(\frac{x}{y}\biggr)=\frac{2\frac{y}{x}}{\sqrt{1+(\frac{y}{x})^2}}= \frac{2\frac{y}{x}}{\frac{1}{x}\sqrt{x^2+y^2}}=\frac{2y}{\sqrt{x^2+y^2}}$$
+
+Sustituyendo este resultado en $u(x,y)$:
+
+$$u(x,y)=\frac{2y}{\sqrt{x^2+y^2}} \sqrt{x^2+y^2}-(x^2+y^2)$$
+$$\therefore u(x,y)= 2y-(x^2+y^2)$$
 
 
 
 
 
-## Ecuaciones Diferenciales Parciales de Primer Orden No Lineales
 
 
-$\textbf{Ecuaciones Diferenciales Parciales de Primer Orden No Lineales}$ 
+
+
+
+
+
+
+## Ecuaciones diferenciales parciales de primer orden no lineales
+
+
+$\textbf{Ecuaciones diferenciales parciales de primer orden no lineales}$ 
 
 Una ecuación diferencial parcial (edp) de primer orden no lineal es una ecuación de la forma
 $$
@@ -576,6 +749,168 @@ $$
 $\textbf{La solución singular}$ es una solución de $(1)$ que no depende ni de constantes arbitrarias ni de funciones arbitrarias. Cuando existe la solución singular, esta se obtiene de la solución completa $(2)$ por eliminación de $a$ y $b
 $ del siguiente sistema de tres ecuaciones.
 
+
+$$
+V(x,y,z,a,b)=0
+$$
+$$
+\frac{\partial V}{\partial a}(x,y,z,a,b)=0
+$$
+$$
+\frac{\partial V}{\partial b}(x,y,z,a,b)=0
+$$
+
+la solucion general: es solucion de $(1)$ que depende de la funcion arbitraria.Ssi lasolucion completa de $(1)$ esta dada por $(z)$ entonces la solucion general esta dada por el sisitema de dos ecuaciones:
+
+$$
+V(x,y,z,a,b(a))=0
+$$
+$$
+\frac{\partial V}{\partial a}(x,y,z,a,b(a)) + 
+\frac{\partial V}{\partial b}(x,y,z,a,b(a))b ^\prime (a)=0
+$$
+
+donde $b(a)$ es una funcion arbitraria.
+
+
+
+### Ecuaciones diferenciales totales 
+
+Se llama ecuacion diferencial total o ecuacion de Pfaff a una ecuacion de la forma :
+
+$$
+dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=0 
+$$
+
+con $P(x,y,z),Q(x,y,z) y R(x,y,z)$ son derivables respectoa todas sus variables.
+
+La expresión (1) es integrable si existe una función $\mu(x,y,z)$, conocida como factor integrable, tal que:
+$$
+\mu(x,y,z) \left( P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz \right)
+$$
+es una diferencial exacta, es decir,
+$$
+\mu(x,y,z) \left( P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz \right) = d(U(x,y,z))
+$$
+$\textit{Nota:}$ En el caso en que $U$ sea constante se retoma la ecuación $(1)$.
+
+Para el caso especial $U(x,y,z) = c$, $c$ constante, se recupera la ec. (1) y $U(x,y,z) = C$ es solución general de la ecuación de Pfaff.
+
+$\textbf{Teorema \#1:}$ La condición necesaria y suficiente para que la EDP $P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz = 0$ sea integrable es que :
+$$
+\vec{A}\cdot (\nabla  \times \vec{A})
+$$
+
+DEMOSTRACION
+
+Si la ecuacion $dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=0$, con $c$ cosntante tal que :
+
+$$
+ \frac{\partial f}{\partial x}dx + \frac{df}{dy}dy + \frac{\partial f}{\partial z} {dz}= 0
+$$
+donde :
+$$
+ \frac{\partial f}{\partial x}=\mu(x,y,z)P(x,y,z)
+$$
+$$
+ \frac{\partial f}{\partial y}=\mu(x,y,z)Q(x,y,z)
+$$
+$$
+ \frac{\partial f}{\partial z}=\mu(x,y,z)R(x,y,z)
+$$
+
+$$
+\biggl(\frac{df}{dx}, \frac{df}{dy},  \frac{df}{dz}\biggr)=\mu(x,y,z)(P,Q,R)
+$$
+$$\nabla f =\mu \vec{A}$$
+
+usando el hecho de que $\nabla \times (\nabla  f)=\vec{0}$
+
+
+$$
+\Longrightarrow \nabla \times (\nabla  f)=\nabla \times (\nabla  \mu \vec{A})=\vec{0}
+$$
+
+Entonces
+$$
+\nabla \times (\mu \vec{A}) = \vec{0}
+$$
+Además,
+$$
+\mu \vec{A} \cdot \left( \nabla \times (\mu \vec{A}) \right) = 0
+$$
+es decir,
+$$
+\vec{A} \cdot \left( \nabla \times \vec{A} \right) = 0
+$$
+(se demostrará en la tarea con la idea de la siguiente demostración).
+
+$\textbf{Obs \#1:}$
+$ \nabla \times \vec{A} = \vec{0}$ implica que:
+
+$$
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}, \quad \frac{\partial P}{\partial z} = \frac{\partial R}{\partial x}, \quad \frac{\partial Q}{\partial z} = \frac{\partial R}{\partial y}
+$$
+
+$$
+\nabla \times \vec{A} =
+\begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+P & Q & R \\
+\end{vmatrix}
+$$
+
+$$
+= \hat{i} \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) - \hat{j} \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) + \hat{k} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) = \vec{0}
+$$
+
+$\textbf{Obs \#2:}$ 
+$\vec{A} \cdot \left( \nabla \times \vec{A} \right) = 0$ implica que:
+
+$$
+P \left( \frac{\partial Q}{\partial z} - \frac{\partial R}{\partial y} \right) + Q \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) + R \left( \frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x} \right) = 0
+$$
+
+
+
+### Metodo general de integracion de una ecuacion Pfaff
+
+1) Considerar una variable como parametro constante sin perdida de generalidad, se elige z constante , entonces 
+$$
+dz=0
+$$
+
+de esta forma se tiene :
+
+$$
+P(x,y,z)dx+Q(x,y,z)dy=0
+$$
+
+debemos encontrar G(x,y,z) tal que :
+$$
+dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy
+$$
+
+2) Buscamos un factor integrante $\mu (x,y,z)$ tal que 
+
+$$
+\mu (x,y,z)P(x,y,z)=\frac{\partial G}{\partial x}(x,y,z)
+$$
+$$
+\mu (x,y,z)Q(x,y,z)=\frac{\partial G}{\partial y}(x,y,z)
+$$
+
+3) Resolvemos la ecuacion diferencial 
+
+$$
+dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+K(x,y,z)dz=0
+$$
+
+con 
+$$
+K(x,y,z)=\mu (x,y,z)R(x,y,z)-\frac{\partial G}{\partial z}(x,y,z)
+$$
 $\textbf{Ejemplo:}$ Verificar si la EDP es integrable y en caso afirmativo encontrar su solución:
 
 $$
@@ -633,186 +968,30 @@ $$
 = yz (-3x - 3yz^2)+ xz+yz^3(3y)-2xy(0)
 $$
 
-Entonces
-$$
-\nabla \times (M \vec{A}) = \vec{0}
-$$
-Además,
-$$
-M \vec{A} \cdot \left( \nabla \times (M \vec{A}) \right) = 0
-$$
-es decir,
-$$
-\vec{A} \cdot \left( \nabla \times \vec{A} \right) = 0
-$$
-(se demostrará en la tarea con la idea de la siguiente demostración).
+$$=-3xyz-3y^2z^3+3yxz+3y^2z^3=0$$
+$\therefore$ La EDP es integrable.
 
-$\textbf{Obs \#1:}$
-$ \nabla \times \vec{A} = \vec{0}$ implica que
+1) Consideremos a $y$ como párametro constante, entonces $dy=0$ y:
+   
+$$yzdx-2xydz=0$$
+$$\Longrightarrow zdx-2x dz=0$$
 
-$$
-\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}, \quad \frac{\partial P}{\partial z} = \frac{\partial R}{\partial x}, \quad \frac{\partial Q}{\partial z} = \frac{\partial R}{\partial y}
-$$
+Dividiendo con $xz$:
+$$\frac{dx}{x}-2\frac{dz}{z}=0$$
 
-$$
-\nabla \times \vec{A} =
-\begin{vmatrix}
-\hat{i} & \hat{j} & \hat{k} \\
-\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-P & Q & R \\
-\end{vmatrix}
-$$
+Integrando:
+$$\int \frac{dx}{x}- 2\int \frac{dz}{z}=0$$
 
-$$
-= \hat{i} \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) - \hat{j} \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) + \hat{k} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) = \vec{0}
-$$
+$$\ln|x|-2\ln|z|=\ln|c|$$
 
-$\textbf{Obs \#2:}$ 
-$\vec{A} \cdot \left( \nabla \times \vec{A} \right) = 0$ implica
+con $c$ constante.
 
-$$
-P \left( \frac{\partial Q}{\partial z} - \frac{\partial R}{\partial y} \right) + Q \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) + R \left( \frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x} \right) = 0
-$$
-
-### Ecuaciones diferenciales totales 
-
-se llama ecuacion diferencial total o ecuacion de Pfaff a una ecuacion de la forma :
-
-$$
-dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=0 
-$$
-
-con $P(x,y,z),Q(x,y,z) y R(x,y,z)$ son derivables respectoa todas sus variables.
-
-La expresión (1) es integrable si existe una función $\mathcal{M}(x,y,z)$, conocida como factor integrable, tal que:
-$$
-\mathcal{M}(x,y,z) \left( P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz \right)
-$$
-es una diferencial exacta, es decir,
-$$
-\mathcal{M}(x,y,z) \left( P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz \right) = d(U(x,y,z))
-$$
-\textit{Nota:} En el caso en que $U$ sea constante se retoma la ecuación $(1)$.
-
-Para el caso especial $U(x,y,z) = c$, $c$ constante, se recupera la ec. (1) y $U(x,y,z) = C$ es solución general de la ecuación de Pfaff.
-
-$\textbf{Teorema \#1:}$ La condición necesaria y suficiente para que la EDP $P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz = 0$ sea integrable es que :
-$$
-\vec{A}\cdot (\nabla  \times \vec{A})
-$$
-
-DEMOSTRACION
-
-Si la ecuacion $dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=0 $, con $c$ cosntante tal que :
-
-$$
- \frac{\partial f}{\partial x}dx + \frac{df}{dy}dy + \frac{\partial f}{\partial z} {dz}= 0
-$$
-donde :
-$$
- \frac{\partial f}{\partial x}=\mu(x,y,z)P(x,y,z)
-$$
-$$
- \frac{\partial f}{\partial y}=\mu(x,y,z)Q(x,y,z)
-$$
-$$
- \frac{\partial f}{\partial z}=\mu(x,y,z)R(x,y,z)
-$$
-
-$$
-\frac{df}{dx}, \frac{df}{dy},  \frac{df}{dz}=\mu(x,y,z)(P,Q,R)
-
-$$
-$$
-\nabla f =\mu \vec{A}
-$$
-
-usando elecho de que $\nabla \times (\nabla  f)=\vec{0}$
+$$\Longrightarrow \ln\biggl|\frac{x}{z^2}\biggr|=\ln|c|$$
+$$\Longrightarrow \frac{x}{z^2}=c$$
+Es decir $G(x,y,z)=\frac{x}{z^2}$
 
 
-$$
-\Longrightarrow \nabla \times (\nabla  f)=\nabla \times (\nabla  \mu \vec{A})=\vec{0}
-$$
-
-### Metodo general de integracion de una ecuacion Pfaff
-
-considerar una variable como parametro constante sin perdida de generalidad, se elige z constante , entonces 
-$$
-dz=0
-$$
-
-de esta droma se tiene :
-
-$$
-P(x,y,z)dx+Q(x,y,z)dy=0
-$$
-
-debemos encontrar G(x,y,z) tal que :
-$$
-dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy
-$$
-
-buscamos un factor integrante $\mu (x,y,z)$ tal que 
-
-$$
-\mu (x,y,z)P(x,y,z)=\frac{\partial G}{\partial x}(x,y,z)
-$$
-$$
-\mu (x,y,z)Q(x,y,z)=\frac{\partial G}{\partial y}(x,y,z)
-
-$$
-
-resolvemos la ecuacion diferencial 
-
-$$
-dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+K(x,y,z)dz=0
-$$
-
-con 
-$$
-K(x,y,z)=\mu (x,y,z)R(x,y,z)-\frac{\partial G}{\partial z}(x,y,z)
-$$
-
-multiplicamos por y
-
-$$
-\Longrightarrow  \frac{d}{dy}y+(G)+y=0
-$$
-$$
-\Longrightarrow  \frac{d}{dy}(yG)+\frac{d}{dy}(\frac{1}{z}y^2)=0
-
-$$
-
-es decir
-
-$$
-\frac{d}{dy}(yG+\frac{1}{z}y^2)=0
-$$
-$$
-\Longrightarrow  \ yG+\frac{1}{z}y^2=a
-$$
-
-con $a $= constante 
-
-Resolviendo para G
-
-$$
-G=\frac{a}{y}-\frac{1}{z}y
-$$
-
-ya que $G=G=\frac{x}{z^2}$  
-
-igualando 
-
-$$
-\frac{x}{z^2}=\frac{a}{y}-\frac{1}{z}y
-$$
-
-$$
-a=\frac{yx}{z^2}+\frac{1}{z}y^2
-$$
-
-ademas :
+2) Además :
 
 $$
 \frac{\partial G}{\partial x}=\mu P
@@ -841,7 +1020,7 @@ $$
 =\frac{G}{y}+1
 $$
 
-La ecuacion diferencia parciales se escribe como :
+3) La ecuacion diferencia parciales se escribe como :
 $$
  dG + Kdy =0
 $$
@@ -854,254 +1033,7 @@ $$
 $$
 \frac{dG}{dy}+\frac{G}{y}+1=0
 $$
-$$
-V(x,y,z,a,b)=0
-$$
-$$
-\frac{\partial V}{\partial a}(x,y,z,a,b)=0
-$$
-$$
-\frac{\partial V}{\partial b}(x,y,z,a,b)=0
-$$
 
-la solucion general: es solucion de $(1)$ que depende de la funcion arbitraria.Ssi lasolucion completa de $(1)$ esta dada por $(z)$ entonces la solucion general esta dada por el sisitema de dos ecuaciones:
-
-$$
-V(x,y,z,a,b(a))=0
-$$
-$$
-\frac{\partial V}{\partial a}(x,y,z,a,b(a)) + 
-\frac{\partial V}{\partial b}(x,y,z,a,b(a))b ^\prime (a)=0
-$$
-
-donde $b(a)$ es una funcion arbitraria  
-
-
-### Ecuaciones Diferenciales Parciales de Primer Orden No Lineales
-
-
-$\textbf{Ecuaciones Diferenciales Parciales de Primer Orden No Lineales}$ 
-
-Una ecuación diferencial parcial (edp) de primer orden no lineal es una ecuación de la forma
-$$
-\begin{equation}
-    F(x, y, z, p, q) = 0
-\end{equation}
-$$
-
-donde $z = z(x, y)$ es la función desconocida de dos variables independientes $x$ y $y$, mientras que
-$$
-    p = \frac{\partial z}{\partial x} \quad \text{y} \quad q = \frac{\partial z}{\partial y}
-$$
-
-La edp (1) tiene tres tipos de soluciones: la completa, la singular y la general.
-
-La \textbf{solución completa} es una solución de (1) la cual depende de dos constantes arbitrarias e independientes,$a$ y $b$ así que se puede escribir
-$$
-\begin{equation}
-    V(x, y, z, a, b) = 0
-\end{equation}
-$$
-
-$\textbf{La solución singular}$ es una solución de $(1)$ que no depende ni de constantes arbitrarias ni de funciones arbitrarias. Cuando existe la solución singular, esta se obtiene de la solución completa $(2)$ por eliminación de $a$ y $b
-$ del siguiente sistema de tres ecuaciones.
-
-$\textbf{Ejemplo:}$ Verificar si la EDP es integrable y en caso afirmativo encontrar su solución:
-
-$$
-yz \, dx + (x z + y z^3) \, dy - 2xy \, dz = 0
-$$
-
-$\textbf{Solucion:}$
-
-$$
-\vec{A} \cdot (\nabla \times \vec{A}) = 0
-$$
-
-$$
-\vec{A} = (P, Q, R) = (yz, xz + yz^3, -2xy)
-$$
-
-$$
-\nabla \times \vec{A} =
-\begin{vmatrix}
-\hat{i} & \hat{j} & \hat{k} \\
-\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-yz & xz + yz^3 & -2xy
-\end{vmatrix}
-$$
-
-$$
-= \hat{i} \left( \frac{\partial (-2xy)}{\partial y} - \frac{\partial (xz + yz^3)}{\partial z} \right) 
-- \hat{j} \left( \frac{\partial (-2xy)}{\partial x} - \frac{\partial (yz)}{\partial z} \right) 
-+ \hat{k} \left( \frac{\partial (xz + yz^3)}{\partial x} - \frac{\partial (yz)}{\partial y} \right)
-$$
-
-$$
-= \hat{i} \left( -2x - (x + 3yz^2) \right) - \hat{j} \left( -2y - y \right) + \hat{k} (z - z)
-$$
-
-$$
-= \hat{i} (-3x - 3yz^2) - \hat{j} (-3y)
-$$
-
-$$
-= -\hat{i} (3x + 3yz^2) + \hat{j} (3y)
-$$
-
-Calculamos
-
-$$
-\vec{A} \cdot (\nabla \times \vec{A}) = 0
-$$
-
-$$
-= (yz, xz + yz^3, -2xy) \cdot (-3x - 3yz^2, 3y, 0)
-$$
-
-$$
-= yz (-3x - 3yz^2)+ xz+yz^3(3y)-2xy(0)
-$$
-
-Entonces
-$$
-\nabla \times (M \vec{A}) = \vec{0}
-$$
-Además,
-$$
-M \vec{A} \cdot \left( \nabla \times (M \vec{A}) \right) = 0
-$$
-es decir,
-$$
-\vec{A} \cdot \left( \nabla \times \vec{A} \right) = 0
-$$
-(se demostrará en la tarea con la idea de la siguiente demostración).
-
-$\textbf{Obs \#1:}$
-$ \nabla \times \vec{A} = \vec{0}$ implica que
-
-$$
-\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}, \quad \frac{\partial P}{\partial z} = \frac{\partial R}{\partial x}, \quad \frac{\partial Q}{\partial z} = \frac{\partial R}{\partial y}
-$$
-
-$$
-\nabla \times \vec{A} =
-\begin{vmatrix}
-\hat{i} & \hat{j} & \hat{k} \\
-\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-P & Q & R \\
-\end{vmatrix}
-$$
-
-$$
-= \hat{i} \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) - \hat{j} \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) + \hat{k} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) = \vec{0}
-$$
-
-$\textbf{Obs \#2:}$ 
-$\vec{A} \cdot \left( \nabla \times \vec{A} \right) = 0$ implica
-
-$$
-P \left( \frac{\partial Q}{\partial z} - \frac{\partial R}{\partial y} \right) + Q \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) + R \left( \frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x} \right) = 0
-$$
-
-### Ecuaciones diferenciales totales 
-
-se llama ecuacion diferencial total o ecuacion de Pfaff a una ecuacion de la forma :
-
-$$
-dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=0 
-$$
-
-con $P(x,y,z),Q(x,y,z) y R(x,y,z)$ son derivables respectoa todas sus variables.
-
-La expresión (1) es integrable si existe una función $\mathcal{M}(x,y,z)$, conocida como factor integrable, tal que:
-$$
-\mathcal{M}(x,y,z) \left( P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz \right)
-$$
-es una diferencial exacta, es decir,
-$$
-\mathcal{M}(x,y,z) \left( P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz \right) = d(U(x,y,z))
-$$
-\textit{Nota:} En el caso en que $U$ sea constante se retoma la ecuación $(1)$.
-
-Para el caso especial $U(x,y,z) = c$, $c$ constante, se recupera la ec. (1) y $U(x,y,z) = C$ es solución general de la ecuación de Pfaff.
-
-$\textbf{Teorema \#1:}$ La condición necesaria y suficiente para que la EDP $P(x,y,z) \, dx + Q(x,y,z) \, dy + R(x,y,z) \, dz = 0$ sea integrable es que :
-$$
-\vec{A}\cdot (\nabla  \times \vec{A})
-$$
-
-DEMOSTRACION
-
-Si la ecuacion $dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=0 $, con $c$ cosntante tal que :
-
-$$
- \frac{\partial f}{\partial x}dx + \frac{df}{dy}dy + \frac{\partial f}{\partial z} {dz}= 0
-$$
-donde :
-$$
- \frac{\partial f}{\partial x}=\mu(x,y,z)P(x,y,z)
-$$
-$$
- \frac{\partial f}{\partial y}=\mu(x,y,z)Q(x,y,z)
-$$
-$$
- \frac{\partial f}{\partial z}=\mu(x,y,z)R(x,y,z)
-$$
-
-$$
-\frac{df}{dx}, \frac{df}{dy},  \frac{df}{dz}=\mu(x,y,z)(P,Q,R)
-
-$$
-$$
-\nabla f =\mu \vec{A}
-$$
-
-usando elecho de que $\nabla \times (\nabla  f)=\vec{0}$
-
-
-$$
-\Longrightarrow \nabla \times (\nabla  f)=\nabla \times (\nabla  \mu \vec{A})=\vec{0}
-$$
-
-### Metodo general de integracion de una ecuacion Pfaff
-
-considerar una variable como parametro constante sin perdida de generalidad, se elige z constante , entonces 
-$$
-dz=0
-$$
-
-de esta droma se tiene :
-
-$$
-P(x,y,z)dx+Q(x,y,z)dy=0
-$$
-
-debemos encontrar G(x,y,z) tal que :
-$$
-dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy
-$$
-
-buscamos un factor integrante $\mu (x,y,z)$ tal que 
-
-$$
-\mu (x,y,z)P(x,y,z)=\frac{\partial G}{\partial x}(x,y,z)
-$$
-$$
-\mu (x,y,z)Q(x,y,z)=\frac{\partial G}{\partial y}(x,y,z)
-
-$$
-
-resolvemos la ecuacion diferencial 
-
-$$
-dG(x,y,z)=P(x,y,z)dx+Q(x,y,z)dy+K(x,y,z)dz=0
-$$
-
-con 
-$$
-K(x,y,z)=\mu (x,y,z)R(x,y,z)-\frac{\partial G}{\partial z}(x,y,z)
-$$
 
 multiplicamos por y
 
@@ -1110,7 +1042,6 @@ $$
 $$
 $$
 \Longrightarrow  \frac{d}{dy}(yG)+\frac{d}{dy}(\frac{1}{z}y^2)=0
-
 $$
 
 es decir
@@ -1122,7 +1053,7 @@ $$
 \Longrightarrow  \ yG+\frac{1}{z}y^2=a
 $$
 
-con $a $= constante 
+con $a$= constante 
 
 Resolviendo para G
 
@@ -1139,72 +1070,37 @@ $$
 $$
 
 $$
-a=\frac{yx}{z^2}+\frac{1}{z}y^2
+\therefore a=\frac{yx}{z^2}+\frac{1}{z}y^2
 $$
 
-ademas :
 
-$$
-\frac{\partial G}{\partial x}=\mu P
-$$
-$$
-\Longrightarrow  \frac{\partial }{\partial x}(\frac{x}{z^2})=\mu (xy)
-$$
-$$
-\frac{x}{z^2}=\mu (xy)
-$$
-$$
-\mu =\frac{1}{yz^3}
-$$
 
-Tambien se determina:
-$$
-K(x,y,z) =\mu Q - \frac{\partial G}{\partial y}
-$$
-$$
-=\frac{1}{yz^3}(xz+yz^3)-\frac{\partial }{\partial y}(\frac{x}{z^2})
-$$
-$$
-=\frac{x}{yz^2}+1-0
-$$
-$$
-=\frac{G}{y}+1
-$$
 
-La ecuacion diferencia parciales se escribe como :
-$$
- dG + Kdy =0
-$$
 
-es decir :
 
-$$
-dG+(\frac{G}{y}+1) dy=0
-$$
-$$
-\frac{dG}{dy}+\frac{G}{y}+1=0
-$$
-$$
-V(x,y,z,a,b)=0
-$$
-$$
-\frac{\partial V}{\partial a}(x,y,z,a,b)=0
-$$
-$$
-\frac{\partial V}{\partial b}(x,y,z,a,b)=0
-$$
 
-la solucion general: es solucion de $(1)$ que depende de la funcion arbitraria.Ssi lasolucion completa de $(1)$ esta dada por $(z)$ entonces la solucion general esta dada por el sisitema de dos ecuaciones:
 
-$$
-V(x,y,z,a,b(a))=0
-$$
-$$
-\frac{\partial V}{\partial a}(x,y,z,a,b(a)) + 
-\frac{\partial V}{\partial b}(x,y,z,a,b(a))b ^\prime (a)=0
-$$
 
-donde $b(a)$ es una funcion arbitraria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1228,74 +1124,74 @@ $\Phi (x,y,u,p,q) = a$,  con a una constante arbitraria
 
 Las funciones $F = 0$ y $ \Phi = a$ serán tales que que permitan resolver para p y q.
 
-$p = \gamma (x,y,u,a)$
-$q = \gamma (x,y,u,a)$
+$$p = \gamma (x,y,u,a)$$
+$$q = \gamma (x,y,u,a)$$
 
 De la definición de p y q tenemos:
 
-$\frac{\partial p}{\partial y} = \frac{\partial}{\partial y} (\frac{\partial u}{\partial x}) = \frac{\partial}{\partial x} (\frac{\partial u}{\partial y}) = (\frac{\partial q}{\partial x}) $
+$$\frac{\partial p}{\partial y} = \frac{\partial}{\partial y} (\frac{\partial u}{\partial x}) = \frac{\partial}{\partial x} (\frac{\partial u}{\partial y}) = (\frac{\partial q}{\partial x}) $$
 
 Además de la ecuación de Pfaff.
 
-$du = pdx + qdy$
+$$du = pdx + qdy$$
 
 Satisface la condición de integrabilidad completa y su solución depende de otra constante arbitraria $b$. Por lo tanto se puede escribir:
 
-$V(x,y,u,a,b) = 0$
+$$V(x,y,u,a,b) = 0$$
 
 Esta ecuación nos proporciona la solución completa de la EDP de primer orden no lineal.
 
-$F(x,y,u,p,q) = 0$
+$$F(x,y,u,p,q) = 0$$
 
 Derivamos respecto $x$.
 
 $0 = \frac{dF}{\partial x} = \frac{\partial F}{\partial x} \frac{dx}{dx} + \frac{\partial F}{\partial y} \frac{dy}{dy} + \frac{\partial F}{\partial x} \frac{\partial u}{\partial x} + \frac{\partial F}{\partial p} \frac{\partial p}{\partial x} + \frac{\partial F}{\partial q} \frac{\partial q}{\partial x}$, considerando que $(x,y)$ son independientes.
 
-$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial u} (p) + \frac{\partial F}{\partial p} \frac{\partial p}{\partial x} + \frac{\partial F}{\partial q} \frac{\partial q}{\partial x}$,
+$$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial u} (p) + \frac{\partial F}{\partial p} \frac{\partial p}{\partial x} + \frac{\partial F}{\partial q} \frac{\partial q}{\partial x}$$
 
-$F_x + F_u p + F_p p_x + F_q p_y = 0$
+$$F_x + F_u p + F_p p_x + F_q p_y = 0$$
 
-$F_p p_x + F_q p_y = - (F_x + F_u p)$ 
+$$F_p p_x + F_q p_y = - (F_x + F_u p)$$
 
 Derivamos respecto $y$.
 
 $\frac{dF}{\partial y} = \frac{\partial F}{\partial x} \frac{dx}{dy} + \frac{\partial F}{\partial y} \frac{dy}{dy} + \frac{\partial F}{\partial u} \frac{\partial u}{\partial y} + \frac{\partial F}{\partial p} \frac{\partial p}{\partial y} + \frac{\partial F}{\partial q} \frac{\partial q}{\partial y}$, considerando que $(x,y)$ son independientes.
 
-$\frac{\partial F}{\partial y} + \frac{\partial F}{\partial u} (q) + \frac{\partial F}{\partial p} \frac{\partial q}{\partial x} + \frac{\partial F}{\partial q} \frac{\partial q}{\partial y}$,
+$$\frac{\partial F}{\partial y} + \frac{\partial F}{\partial u} (q) + \frac{\partial F}{\partial p} \frac{\partial q}{\partial x} + \frac{\partial F}{\partial q} \frac{\partial q}{\partial y}$$
 
-$F_y + F_u q + F_q q_x + F_q q_y = 0$
+$$F_y + F_u q + F_q q_x + F_q q_y = 0$$
 
-$F_p q_x + F_q q_y = - (F_y + F_u q)$ 
+$$F_p q_x + F_q q_y = - (F_y + F_u q)$$
 
 Observación: Estas expresiones son EDP cuasilineales para p y q.
 
-$F_p \frac{\partial p}{\partial x} + F_q \frac{\partial p}{\partial y} = - (F_x + F_u p)$
+$4F_p \frac{\partial p}{\partial x} + F_q \frac{\partial p}{\partial y} = - (F_x + F_u p)$$
 
-$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{dp}{F_x + F_u p}$
+$$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{dp}{F_x + F_u p}$$
 
-$dy = \frac{F_q}{F_p} dx$
+$$dy = \frac{F_q}{F_p} dx$$
 
-$F_p \frac{\partial p}{\partial x} + F_q \frac{\partial p}{\partial y} = - (F_y + F_u q)$
+$$F_p \frac{\partial p}{\partial x} + F_q \frac{\partial p}{\partial y} = - (F_y + F_u q)$$
 
-$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{dq}{F_y + F_u q}$
+$$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{dq}{F_y + F_u q}$$
 
-$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{dp}{F_x+F_up} = - \frac{dq}{F_y + F_u q} $
+$$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{dp}{F_x+F_up} = - \frac{dq}{F_y + F_u q} $$
 
 Además considerando que:
 
 $du = \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy = pdx + qdy$, con base en (1).
 
-$du = pdx + q \frac{F_q}{F_p} dx = \frac{F_p p + q F_q}{F_p} dx$
+$$du = pdx + q \frac{F_q}{F_p} dx = \frac{F_p p + q F_q}{F_p} dx$$
 
 Entonces:
 
-$du = \frac{F_p p + q F_q }{F_p} dx$
+$$du = \frac{F_p p + q F_q }{F_p} dx$$
 
-$\frac{dx}{F_p} = \frac{du}{F_p p + q F_q}$
+$$\frac{dx}{F_p} = \frac{du}{F_p p + q F_q}$$
 
 Por lo tanto:
 
-$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{-dp}{F_x + F_u p} = - \frac{dq}{F_y+F_up} = \frac{du}{F_p p + q F_q}$
+$$\frac{dx}{F_p} = \frac{dy}{F_q} = - \frac{-dp}{F_x + F_u p} = - \frac{dq}{F_y+F_up} = \frac{du}{F_p p + q F_q}$$
 
 Este sistema de ecuaciones se conoce cono ecuaciones de Charpit.
 
@@ -1303,7 +1199,7 @@ Este sistema de ecuaciones se conoce cono ecuaciones de Charpit.
 
 Encontrar la solución general de 
 
-$u^3 = pq^2$
+$$u^3 = pq^2$$
 
 Solución.
 
@@ -1321,93 +1217,93 @@ $F_y = 0$
 
 Nuestras ecuaciones de Charpit son
 
-$- \frac{dx}{q^2} = - \frac{dy}{2pq} = - \frac{dp}{3u^2 p} = - \frac{dq}{3u^2 q} = \frac{du}{-pq^2 p + q(-2pq)}$
+$$- \frac{dx}{q^2} = - \frac{dy}{2pq} = - \frac{dp}{3u^2 p} = - \frac{dq}{3u^2 q} = \frac{du}{-pq^2 p + q(-2pq)}$$
 
 Observación.
 
- $-pq^2 p + q(-2pq) = -3pq^2, pq^2 = u^3$
+ $$-pq^2 p + q(-2pq) = -3pq^2, pq^2 = u^3$$
 
-$- \frac{dx}{q^2} = - \frac{dy}{2pq} = - \frac{dp}{3u^2 p} = - \frac{dq}{3u^2 q} = - \frac{du}{3u^3}$
+$$- \frac{dx}{q^2} = - \frac{dy}{2pq} = - \frac{dp}{3u^2 p} = - \frac{dq}{3u^2 q} = - \frac{du}{3u^3}$$
 
 Considerando la igualdad:
 
-$\frac{dq}{3u^2 q} = \frac{du}{3u^3}$
+$$\frac{dq}{3u^2 q} = \frac{du}{3u^3}$$
 
-$\frac{dq}{q} = \frac{du}{u}$
+$$\frac{dq}{q} = \frac{du}{u}$$
 
 Integrando se obtiene:
 
-$ln |q| = ln |u| + ln |c|$
+$$ln |q| = ln |u| + ln |c|$$
 
-$q = uc$
+$$q = uc$$
 
-$\frac{\partial u}{\partial y} = uc$
+$$\frac{\partial u}{\partial y} = uc$$
 
-$\frac{du}{u} = cdy$
+$$\frac{du}{u} = cdy$$
 
 $ln |u| = cy + a$, con a una constante 
 
-$u = e^{cy+a} = e^{a} e^{cy} + f(x)$
+$$u = e^{cy+a} = e^{a} e^{cy} + f(x)$$
 
-$u = Ae^{cy} + f(x)$
+$$u = Ae^{cy} + f(x)$$
 
 Consideramos ahora la igualdad:
 
-$ \frac{dp}{3u^2 p} = \frac{du}{3u^3}$
+$$\frac{dp}{3u^2 p} = \frac{du}{3u^3}$$
 
-$\frac{dp}{p } = \frac{du}{u}$
+$$\frac{dp}{p } = \frac{du}{u}$$
 
 $ln |p| = ln |u| + ln |b|$ , con b una constante 
 
-$p = ub$
+$$p = ub$$
 
 Tenemos entonces:
 
-$q = uc$
+$$q = uc$$
 
-$p = ub$
+$$p = ub$$
 
-$u = exp(cy) + f(x)$
+$$u = exp(cy) + f(x)$$
 
-$u = exp(bx) + g(y) + \tau $, con $\tau$ una constante
+$u = exp(bx) + g(y) + \tau$, con $\tau$ una constante
 
 Por lo tanto la solución general de nuestra ecuación es:
 
-$u = e^{bx} + e^{cy} + \tau $, con $b, c = 1$
+$u = e^{bx} + e^{cy} + \tau$, con $b, c = 1$
 
 **Ejemplo 2**
 
 Hallar la solución de la EDP no lineal 
 
-$xp^2 - up + q^2 = 0$
+$$xp^2 - up + q^2 = 0$$
 
-$-xp^2 + q^2 = up$
+$$-xp^2 + q^2 = up$$
 
 Solución
 
-$F(x,y,u,p,q) = xp^2 - up + q^2 = 0$
+$$F(x,y,u,p,q) = xp^2 - up + q^2 = 0$$
 
-$F_x = p^2$
+$$F_x = p^2$$
 
-$F_y = 0$
+$$F_y = 0$$
 
-$F_p = 2xp - u$
+$$F_p = 2xp - u$$
 
-$F_q = 2q$
+$$F_q = 2q$$
 
-$F_u = -p$
+$$F_u = -p$$
 
 Además:
 
-$pF_p + qF_q = p(2xp-u) + q(2q) = 2xp^2 -up +2q^2 = 2(xp^2 + q^2) -up = 2up-up=up$
+$$pF_p + qF_q = p(2xp-u) + q(2q) = 2xp^2 -up +2q^2 = 2(xp^2 + q^2) -up = 2up-up=up$$
 
-$F_x + F_u p = p^2 + p(-p) = 0$
+$$F_x + F_u p = p^2 + p(-p) = 0$$
 
-$F_y + F_u q = 0 -p (q) = -pq$
+$$F_y + F_u q = 0 -p (q) = -pq$$
 
 Como $F_x + F_u p = 0$ no podemos escribir las ecuaciones de Charpit tal como las tenemos. Si regresamos en el proceso donde se obtienen las ecuaciones tenemos.
 
-$F_p P_x + F_y P_y = - (F_x + F_u p) = 0$
+$$F_p P_x + F_y P_y = - (F_x + F_u p) = 0$$
 
 Que sería la ecuación cuasilineal para p, pero $F_p \neq F_q$
 
@@ -1421,27 +1317,27 @@ $p =c_1$, con $c_1$ una constante
 
 El sistema se reduce considerando $du = pdx + qdy$, de la ecuación diferencial parcial no lineal, despejamos $q^2$.
 
-$q^2 = -xp^2 + up = p(-xp+u)$
+$$q^2 = -xp^2 + up = p(-xp+u)$$
 
 Sustituyendo en $du$
 
-$du = pdx + \sqrt{p(-xp+u)}dy$
+$$du = pdx + \sqrt{p(-xp+u)}dy$$
 
-$du - pdx = \sqrt{p} \sqrt{(u-px)} dy$
+$$du - pdx = \sqrt{p} \sqrt{(u-px)} dy$$
 
-$d(u-px) = \sqrt{p} \sqrt{(u-px)} dy$
+$$d(u-px) = \sqrt{p} \sqrt{(u-px)} dy$$
 
-$\frac{d(u-px)}{\sqrt{(u-px)}} = \sqrt{p} dy$
+$$\frac{d(u-px)}{\sqrt{(u-px)}} = \sqrt{p} dy$$
 
 Integramos:
 
-$\int \frac{d(u-px)}{\sqrt{(u-px)}} = \int \sqrt{p} dy$
+$$\int \frac{d(u-px)}{\sqrt{(u-px)}} = \int \sqrt{p} dy$$
 
 Sea $z=u-px$, entonces:
 
-$\int \frac{dz}{z} = \int \sqrt{p} dy$
+$$\int \frac{dz}{z} = \int \sqrt{p} dy$$
 
-$\int \frac{1}{z^{\frac{1}{2}}} dz = \int \sqrt{p} dy $
+$$\int \frac{1}{z^{\frac{1}{2}}} dz = \int \sqrt{p} dy$$
 
 Entonces:
 
@@ -1449,8 +1345,8 @@ $2z^{\frac{1}{2}} = \sqrt{p}y + i$, con i una constante
 
 $(u-px)^\frac{1}{2} = \frac{\sqrt{p}y + w}{2}$, con w una constante
 
-$(u-px) = (\frac{\sqrt{p}y + w}{2})^2$
+$$(u-px) = (\frac{\sqrt{p}y + w}{2})^2$$
 
 Por lo tanto:
 
-$u = (\frac{\sqrt{p}y + w}{2})^2 + p(x)$
+$$u = (\frac{\sqrt{p}y + w}{2})^2 + p(x)$$

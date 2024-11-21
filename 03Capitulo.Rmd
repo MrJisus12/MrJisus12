@@ -176,3 +176,721 @@ Sea $\alpha := \frac{\kappa}{\rho C_e}$ entonces:
 
 $$T_{,t} (t,x) = -\alpha T_{,xx}(t,x) \rightarrow \text{Ecuación de calor}$$
 
+
+## Preliminares
+
+Vamos a verificar la propiedad de ortogonalidad de las funciones:
+
+{${1, cos(nx),sen(mx)}$}
+
+Definición.
+
+$$<sin(nx), cos(mx)> = \int_{-\pi}^{\pi} \sin(nx) \cos(mx) \, dx $$
+
+$$<f(x),g(x)> = \int_{-a}^{a} f(x) g(x) dx$$
+
+es decir:
+
+$<1,cos(nx)> = 0$
+
+$<cos(nx) sin(mx)> = 0$ , si $n \neq m $
+
+Calculamos:
+
+$$<1, cos(nx)> = \int_{- \pi}^{\pi} (1) cos (nx) dx$$
+
+$$ =\int_{-\pi}^{\pi} cos(nx) dx $$
+
+$$ = 2 \int_{0}^{\pi} cos (nx) dx = 2 \frac {1}{n} sin (nx) = \left[ \sin(nx) \right]_{0}^{\pi} = 0$$
+
+$$
+<1, sin(nx)> = \int_{-\pi}^{\pi} (1) sin(nx) dx = \int_{-\pi}^{\pi} sin (nx) dx = 0
+$$
+
+Por otra parte:
+
+$$
+<sin(mx) cos(nx)>  = \int_{-\pi}^{\pi} cos(nx) sin(mx) dx 
+$$
+
+Observación.
+
+$sin(\alpha + \beta ) =  sin (\alpha) cos (\beta) + cos (\alpha) sin (\beta)$
+
+$sin(\alpha - \beta ) =  sin (\alpha) cos (\beta) - cos (\alpha) sin (\beta)$
+
+Si sumamos ambas expresiones obtenemos:
+
+$sen(\alpha + \beta ) + sen(\alpha - \beta ) = 2 sen (\alpha) cos (\beta)$ 
+
+$sen(\alpha) cos (\beta) = \frac {1}{2} (sen(\alpha + \beta) + sen (\alpha - \beta))$
+
+Ahora, sea $\alpha = mx$, $\beta = nx$, entonces:
+
+$<cos(nx) sin(mx)> = \frac {1}{2} (sin(nx + mx) + sin (mx - nx))$
+
+$$<cos(nx) sin(mx)>= \frac{1}{2} \int_{-\pi}^{\pi} [sin(n+m)x) + (sin(m-n)x)]dx = 0 $$
+
+También necesitaremos:
+
+P.d.
+
+$<cos(nx) cos(mx)> = 0$, con $n \neq m$
+
+$$<cos(nx) cos(mx)> = \int_{-\pi}^{\pi} cos(nx) cos(mx) dx$$
+
+
+**Observación:** 
+
+$cos (\alpha) cos (\beta) = \frac{1}{2} [cos(\alpha + \beta) + cos(\alpha + \beta)]$
+
+Sea $\alpha = nx$, $\beta = mx$
+
+$$<cos(nx)cos(mx)> =\frac{1}{2}(sin(nx + mx)+sen(nx-mx))$$
+
+$$<cos(nx) cos(mx)>= \frac{1}{2} \int_{-\pi}^{\pi} [sin(n+m)x) + (sin(n-m)x)]dx = 0 $$
+
+Como $cos(\theta)$ es una función par, entonces:
+
+$$<cos(nx) cos(mx)> = \int_{0}^{\pi} [cos((n+m)x)] dx + \int_{0}^{\pi} [cos((n-m)x)]  $$
+
+$$ = \left[\frac{1}{n+m} sen((n+m)x)\right]_{0}^{\pi} + \left[\frac{1}{n-m} sen((n-m)x)\right]_{0}^{\pi} = 0$$
+
+
+P.d.
+
+$<sin(nx) sin(mx)> = 0$, con $n \neq m$
+
+$$<sin(nx) sin(mx)> = \int_{-\pi}^{\pi} sin(nx) sin(mx) dx$$
+
+
+Observación. 
+
+$sen (\alpha) sin (\beta) = \frac{1}{2} [- cos(\alpha + \beta) + cos(\alpha - \beta)]$
+
+Sea $\alpha = nx$, $\beta = mx$
+
+
+$$<sin(nx) sin(mx)>= \frac{1}{2} \int_{-\pi}^{\pi} [cos(nx -mx) - cos(nx + mx)]dx = 0 $$
+
+Como $cos (\theta)$ es una función par, entonces:
+
+$$<sin(nx) sin(mx)> =\frac{2}{2} \int_{0}^{\pi} cos((n-m)x)] dx - [cos((n+m)x)] dx $$
+
+$$ = \left[\frac{1}{n-m} sin((n+m)x)\right]_{0}^{\pi} - \left[\frac{1}{n+m} sin((n-m)x)\right]_{0}^{\pi} = 0$$
+
+Calcular.
+
+$$<cos(nx) cos(nx)> = \int_{-\pi}^{\pi} cos^2 (nx) dx$$
+
+**Observación:**
+
+Como $cos(\alpha + \beta) = cos (\alpha) + cos (\beta) - sin (\alpha) sin(\beta)$.
+
+ Entonces $cos(2\alpha) = cos^2 (\alpha) - sin^2 (\alpha)$ y como $sin^2 (\alpha)= 1 - cos^2 (\alpha)$.
+ 
+ Así  $2cos(\alpha) =  cos^2(\alpha)-(1-cos^2(\alpha)) = 2cos^2(\alpha) - 1$ y se cumple que:
+
+$$cos^2(\alpha) = \frac{2cos(\alpha)+1}{2}$$
+
+
+Por lo tanto:
+
+$$<cos(nx) cos(nx)> = \int_{-\pi}^{\pi}(\frac{cos(2nx)+1}{2}) dx $$
+
+$$= \frac{1}{2} \left[\frac{sin (2x)}{2n} + x \right]_{-\pi}^{\pi} = \frac{1}{2}(\pi +\pi) = \pi$$
+
+Calcular.
+
+$$<sin(nx) sin(nx)> = \int_{-\pi}^{\pi} sin^2 (nx) dx$$
+
+Observación.
+
+$$sin^2(\alpha) = \frac{1- cos(2\alpha)}{2}$$
+
+
+Por lo tanto:
+
+$$<sin(nx) sin(nx)> = \frac{1}{2}\int_{-\pi}^{\pi} (1- cos(2nx)) dx $$
+
+$$= \left[\frac{1}{2} x \right]_{-\pi}^{\pi} - \left[\frac{sin (2nx)}{2n} \right]_{0}^{\pi} = \frac{1}{2}(\pi +\pi) = \pi$$
+
+Del cálculo de varias variables sabemos que:
+
+$$
+\vec{F} =\nabla F(x, y, z) = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j + \frac{\partial f}{\partial z}k
+$$
+
+$$
+\nabla \vec{F}(x,y,z) = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}
+$$
+
+$$
+\nabla (\nabla f(x,y,z)) = \frac {\partial }{\partial x} (\frac{\partial f}{\partial x}) + \frac {\partial }{\partial y} (\frac{\partial f}{\partial y}) + \frac {\partial }{\partial z} (\frac{\partial f}{\partial z})
+$$
+
+
+$$
+\nabla ^2 f(x,y,z) = \frac {\partial^2 f}{\partial x^2} + \frac {\partial^2 f}{\partial y^2} + \frac {\partial^2 f}{\partial z^2}
+$$
+
+La ecuación de Laplace se escribe como:
+
+$$
+\nabla ^2 f = 0
+$$
+
+## Método de Separación de Variables.
+
+Es uno de los metódos de solución para resolver ecuaciones diferenciales parciales y consiste en separar la ecuación diferencial original en otras ecuaciones diferenciales que dependen de una sola variable. Para ilustrar el método se resolverá la ecuación de Laplace.
+
+<br>
+
+### Solución de la ecuación de Laplace en 2 dimensiones: $\bigtriangledown^2\Psi(x,y)=0$
+
+
+$$ \nabla^2 \Psi (x,y) = \frac {\partial ^2 \Psi (x,y)}{\partial x^2} + \frac{\partial ^2 \Psi (x,y)}{\partial y^2} = 0 $$
+
+**Paso #1:**
+
+Se propone que la función $\Psi(x,y)$ es el producto de las funciones $X(x)$,$Y(y)$, esto es:
+
+$$
+\Psi(x,y) = X(x) Y(y)
+$$
+
+Sustituyendo esta forma de $\Psi$ en la ecuación diferencial parcial.
+
+$$\frac{\partial ^2}{\partial x^2}(X(x) Y(y)) + \frac{\partial^2}{\partial y^2}(X(x) Y(y)) = 0$$
+
+Las derivadas parciales se convierten en derivadas totales.
+
+$$
+Y(y) \frac{d^2 X(x)}{dx^2} + X(x) \frac{d^2(Y)(y)}{dy^2} = 0
+$$
+
+**Paso #2:**
+
+Dividir la expresión anterior con $\Psi(x,y) = X(x) Y(y)$. Esto es:
+
+$$
+\frac{Y(y)}{X(x) Y(y)} \frac{d^2 X(x)}{dx^2} + \frac{X(x)}{X(x)Y(y)} \frac{d^2 Y(y)}{dy^2} = 0
+$$
+
+$$
+\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} + \frac{1}{Y(y)} \frac {d^2 Y(y)}{dy^2} = 0
+$$
+
+**Paso #3:**
+
+Separamos variables. Los términos que dependan de una variable se mantienen de un lado de la igualdad.
+
+$$
+\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2}  = -\frac{1}{Y(y)} \frac {d^2 Y(y)}{dy^2}
+$$
+
+Debido a que el lado izquierdo solo depende de $x$ y el lado derecho es una función de $y$, la única forma de lograr la igualdad es que cada término sea igual a una constante, $n^2$ (consante de separación).
+
+$$
+\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = n^2
+$$
+
+$$
+\frac{1}{Y(y)} \frac {d^2 Y(y)}{dy^2} = -n^2
+$$
+
+**Paso #4:**
+
+Resolver las ecuaciones diferenciales anteriores.
+
+Resolvamos primero para $x$:
+
+
+$$
+\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = n^2
+$$
+
+
+$$
+\frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} - n^2 = 0
+$$
+
+$$
+\frac{d^2 X(x)}{dx^2} - n^2 X = 0
+$$
+
+Con ayuda de la ecuación característica o polinomio característico.
+
+$$
+r^2 - n^2 = 0
+$$
+
+$$
+r^2 = n^2
+$$
+
+$$
+r = \textstyle \pm n
+$$
+
+Las soluciones de la ecuación diferencial para $x$ son:
+
+$$
+X_1(x) = Ae^{nx}
+$$
+
+$$
+X_2(x) = Be^{-nx}
+$$
+
+$$
+X_(x) = Ae^{nx} +  Be^{-nx}
+$$
+
+Ahora resolvamos para $y$.
+
+$$
+\frac{1}{Y(y)} \frac {d^2 Y(y)}{dy^2} = -n^2
+$$
+
+$$ \frac {d^2 Y(y)}{dy^2} +  Y n^2= 0$$
+
+Polinomio característico.
+
+$$r^2 + n^2  = 0$$
+
+$$r^2 = -n^2$$
+
+$$
+r = \textstyle \pm (n) i
+$$
+
+Las soluciones para la ecuación diferencial para $y$ son
+
+$$
+Y_1(y) = A_2 e^{ny} \quad Y_2(y) = B_2 e^{-ny}
+$$
+
+Utilizando $e^{i\theta} = \cos\theta + i\sin\theta$:
+$$
+Y_1(y) = A_2 (\cos ny + i\sin ny) 
+$$
+$$
+Y_2(y) = B_2 (\cos ny - i\sin ny)
+$$
+$$
+Y(y) =  A_2 (\cos ny + i\sin ny) + B_2 (\cos ny - i\sin ny)
+$$
+$$
+Y(y) = (A_2 + B_2) \cos(ny) + i(A_2 - B_2) \sin(ny)
+$$
+$$
+Y(y) = C_1 \cos(ny) + C_2 \sin(ny) , \quad C_1 \text{ y }  C_2 \text{ constantes.}
+$$
+
+Así que las soluciones particulares de la ecuación de Laplace en dos dimensiones en coordenadas cartesianas son de la forma:
+$$
+\Psi(x, y) = \left(A e^{nx} + B e^{-nx}\right) \left(C \cos(ny) + D \sin(ny)\right)
+$$
+con $A$, $B$, $C$, y $D$ constantes que se determinan de las condiciones iniciales del problema.
+
+
+
+La solución general es de la forma:
+$$
+\Psi(x, y) = \sum_{n=0}^\infty \left(A_n e^{nx} + B_n e^{-nx}\right) \left(C_n \cos(ny) + D_n \sin(ny)\right)
+$$
+con $A_n$, $B_n$, $C_n$ y $D_n$ constantes.
+
+$\textbf{Obs:}$
+$$
+\frac{1}{X} \frac{d^2X}{dx^2} = -n^2 \quad \text{y} \quad \frac{1}{Y} \frac{d^2Y}{dy^2} = n^2
+$$
+$$\Longrightarrow  
+\Psi(x, y) = \sum_{n=0}^\infty \left(A_n \cos(nx) + B_n \sin(nx)\right) \left(C_n e^{ny} + D_n e^{-ny}\right)
+$$
+
+$\textbf{Ejemplo:}$ El potencial eléctrico $\phi(x, y)$ satisface la ecuación de Laplace en regiones con ausencia de cargas eléctricas. Considerar un arco rectangular conductor cuyos lados horizontales tienen una longitud $a$ y los lados verticales una longitud $b$. El lado horizontal superior está sometido a un potencial constante $\Phi_0$ y se encuentra aislado del resto, que se encuentra a tierra. Encontrar el potencial eléctrico en cualquier punto encerrado por el arco.
+
+$$
+\nabla^2 \phi(x, y) = 0
+$$
+
+Condiciones de frontera:
+$$
+C_1: \phi(x, y=0) = 0 \quad C_2: \phi(x, y=b) = \Phi_0
+$$
+$$
+C_3: \phi(x=0, y) = 0 \quad C_4: \phi(x=a, y) = 0
+$$
+
+La solución que permite resolver este problema es:
+$$
+\phi(x, y) = \sum_{n=0}^\infty \left(A_n \cos(nx) + B_n \sin(nx)\right) \left(C_n e^{ny} + D_n e^{-ny}\right)
+$$
+con $A_n$, $B_n$, $C_n$ y $D_n$ constantes.
+
+Vamos a aplicar las condiciones iniciales para determinar las constantes.
+
+Aplicamos $C_3$:
+$$
+\phi(x=0, y) = \sum_{n=0}^\infty \left(A_n \cos(0) + B_n \sin(0)\right) \left(C_n e^{ny} + D_n e^{-ny}\right) = 0
+$$
+$$
+\phi(x=0, y) = \sum_{n=0}^\infty A_n \left(C_n e^{ny} + D_n e^{-ny}\right) = 0
+$$
+
+
+El término $C_n e^{n y} + D_n e^{-n y}$ no puede ser cero ya que generaría la solución trivial. Por lo tanto, $A_n = 0$. Esto implica:
+$$
+\phi(x, y) = \sum_{n=0}^\infty B_n \sin(n x) \left( C_n e^{n y} + D_n e^{-n y} \right)
+$$
+
+Aplicando la condición $C_4$:
+$$
+\phi(x = a, y) = \sum_{n=0}^\infty B_n \sin(n a)\left( C_n e^{n y} + D_n e^{-n y} \right) = 0
+$$
+
+Para evitar la solución trivial $B_n = 0$, se tiene:
+$$
+\sin(n a) = 0 \implies n a = m \pi, \quad m = 1, 2, 3, \ldots
+$$
+
+Entonces:
+$$
+n = \frac{m \pi}{a}
+$$
+
+Sustituyendo en la solución general:
+$$
+\phi(x, y) = \sum_{m=1}^\infty B_m \sin\left(\frac{m \pi}{a} x\right) \left( C_m e^{\frac{m \pi }{a}y} + D_m e^{-\frac{m \pi }{a} y} \right)
+$$
+
+Aplicando la condición $C_1$:
+$$
+\phi(x, y = 0) = \sum_{m=1}^\infty B_m \sin\left(\frac{m \pi}{a} x\right) (C_m + D_m) = 0
+$$
+
+Esto implica:
+$$
+C_m + D_m = 0 \implies D_m = -C_m
+$$
+
+Finalmente, susutituimos en nuestra solucion general :
+
+$$
+\phi(x, y) = \sum_{m=1}^\infty B_m  \sin\left(\frac{m \pi}{a} x\right) C_m  \left(e^{\frac{m \pi}{a} y} - e^{-\frac{m \pi}{a}  y} \right)
+$$
+
+recordando que :
+$$
+\sinh(x)= \frac{(e^x - e^{-x} ) }{2} 
+$$
+
+$$
+\Longrightarrow   \phi(x, y) = \sum_{m=1}^\infty 2B_m C_m  \sin\left(\frac{m \pi}{a} x\right) \sinh\left(\frac{m \pi}{a} y\right)
+$$
+
+Usando  $F_m = B_m C_m$, como nueva constante obtenemos:
+$$
+\phi(x, y) =2 \sum_{m=1}^\infty F_m \sin\left(\frac{m \pi}{a} x\right) \sinh\left(\frac{m \pi}{a} y\right)
+$$
+
+Aplicando la condición $C_2$:
+$$
+\phi(x, y=b) =2 \sum_{m=1}^\infty F_m \sin\left(\frac{m \pi}{a} x\right) \sinh\left(\frac{m \pi}{a} b\right)=\phi_0
+$$
+
+multiplicamos ambos lados de la igualdad por $\sin\left(\frac{n \pi}{a} x\right)$ e integramos en el ontervalo $[0,a]$
+
+$$
+\phi(x, y=b) =2 \sum_{m=1}^\infty F_m \sinh\left(\frac{m \pi}{a} b\right)\int_{0}^{a} \sin\left(\frac{n \pi}{a} x\right)\sin\left(\frac{m \pi}{a} x\right)dx =\phi_0\int_{0}^{a}\sin\left(\frac{n \pi}{a} x\right)dx
+$$
+
+Resolvemos la integral 
+$$I=\int_{0}^{a} \sin\left(\frac{n \pi}{a} x\right)\sin\left(\frac{m \pi}{a} x\right)dx $$
+
+sea  
+$$
+\alpha = \frac{n \pi}{a} \quad \beta = \frac{m \pi}{a}
+$$
+
+$$
+\Longrightarrow I=\int_{0}^{a} \sin\left(\alpha x\right)\sin\left( \beta x\right)dx
+$$
+
+
+Sabemos que:
+$$
+\cos(\alpha + \beta) = \cos(\alpha)\cos(\beta) - \sin(\alpha)\sin(\beta)
+$$
+$$
+\cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)
+$$
+
+Restando las dos ecuaciones:
+$$
+\cos(\alpha - \beta) - \cos(\alpha + \beta) = 2\sin(\alpha)\sin(\beta)
+$$
+
+Por lo tanto:
+$$
+\sin(\alpha x)\sin(\beta x) = \frac{1}{2} \left( \cos((\alpha - \beta)x) - \cos((\alpha + \beta)x) \right)
+$$
+
+Sustituyendo en la integral:
+$$
+I = \frac{1}{2} \int_0^a \left[ \cos((\alpha - \beta)x) - \cos((\alpha + \beta)x) \right] dx
+$$
+
+Resolviendo cada término:
+$$
+I = \frac{\sin((\alpha - \beta)a)}{2(\alpha - \beta)} - \frac{\sin((\alpha + \beta)a)}{2(\alpha + \beta)}
+$$
+
+volviendo al cambio de $\alpha$ y $\beta$
+$$I = \frac{\sin((\frac{n \pi}{a} - \frac{m \pi}{a})a)}{2(\frac{n \pi}{a} - \frac{m \pi}{a})} - \frac{\sin((\frac{n \pi}{a} + \frac{m \pi}{a})a)}{2(\frac{n \pi}{a} + \frac{m \pi}{a})}$$
+
+$$
+I=\frac{a \sin(\pi(n-m))}{2\pi(n-m)}-\frac{a \sin(\pi(n+m))}{2\pi(n+m)} = 0
+$$
+
+Si $n \neq m$, entonces:
+
+Por otro lado si $n=m$ entonces :
+$$
+I=\int_{0}^{a} \sin^2\left(\frac{m \pi}{a} x\right)dx =\int_{0}^{a} \sin^2\left(\beta x\right)dx =\frac{1}{2}a
+$$
+$$
+\Longrightarrow I=\int_{0}^{a} \sin\left(\frac{n \pi}{a} x\right)\sin\left(\frac{m \pi}{a} x\right)dx =\frac{1}{2}a \delta_{nm}
+$$
+
+para la integral de la derecha tenemos : 
+
+$$
+\int_{0}^{a}\sin\left(\frac{n \pi}{a} x\right)dx=-\frac{a}{n\pi} \cos\left(\frac{n \pi}{a} x\right) \Bigg|_0^a
+$$
+
+$$
+=-\frac{a}{n\pi} \left[ \cos(n\pi) - 1 \right] = -\frac{a}{n\pi} \left( (-1)^n - 1 \right) = \frac{a}{n\pi} \left( 1 - (-1)^n \right)
+$$
+
+Usando la delta de Kronecker:
+
+$$
+\delta_{mn} = 
+\begin{cases} 
+1, & n = m \\
+0, & m \neq n 
+\end{cases}
+$$
+
+Tenemos :
+
+$$
+\Rightarrow 2 \sum_{m=1}^{\infty} F_m \sinh \left( m \pi \frac{b}{a} \right) \frac{a}{2} \delta_{mn} = \phi_0 \frac{a}{n\pi} \left( (-1)^n - 1 \right)
+$$
+
+$\delta_{mn}$ para el caso $n = m$
+
+
+$$
+\Rightarrow 2 F_n \sinh \left( n \pi \frac{b}{a} \right) \frac{a}{2} = -\phi_0 \frac{a}{n\pi} \left( (-1)^n - 1 \right)
+$$
+
+
+$\text{Obs: }$
+$$
+(-1)^n = -1 \text{ para } n \text{ impar}
+$$
+$$
+(-1)^n = 1 \text{ para } n \text{ par.}
+$$
+
+$$
+\Rightarrow F_n = -\frac{\phi_0}{n\pi} \left( (-1)^n - 1 \right) \frac{1}{\sinh \left( n\pi \frac{b}{a} \right)}
+$$
+
+$F_n \text{ es nulo para } n \text{ par.}$
+
+
+$F_n \text{ es diferente de cero para } n \text{ impar.}$
+
+
+
+$$\Rightarrow F_{2j-1} = \frac{\phi_0}{(2j-1)\pi} \frac{2}{\sinh \left( (2j-1)\pi \frac{b}{a} \right)}$$
+
+
+$$
+\phi(x, y) = \sum_{j=1}^\infty \frac{4\phi_0}{(2j-1)\pi} \frac{\sinh \left( (2j-1)\pi \frac{y}{a} \right)}{\sinh \left( (2j-1)\pi \frac{b}{a} \right)} \sin \left( (2j-1)\pi \frac{x}{a} \right)
+$$
+
+<br>
+
+### Solución de la ecuación de Laplace en 3 dimensiones: $\bigtriangledown^2\Psi(x,y,z)=0$
+
+
+$$\frac{\partial^2 \Psi(x,y,z)}{\partial x^2}+\frac{\partial^2 \Psi(x,y,z)}{\partial y^2}+\frac{\partial^2 \Psi(x,y,z)}{\partial z^2}=0$$
+
+**Paso #1:**  Proponemos que la función $\Psi(x,y,z)=A(x)B(y)C(z)$
+$$\Longrightarrow \frac{\partial^2 \Bigl[A(x)B(y)C(z)\Bigr]}{\partial x^2}+\frac{\partial^2 \Bigl[A(x)B(y)C(z)\Bigr]}{\partial y^2}+\frac{\partial^2 \Bigl[A(x)B(y)C(z)\Bigr]}{\partial z^2}=0$$
+
+$$B(y)C(z)\frac{d^2A(x)}{d x^2}+A(x)C(z)\frac{d^2 B(y)}{d y^2}+A(x)B(y)\frac{d^2 C(z)}{d z^2}=0$$
+
+**Paso #2:** Dividimos con la función propuesta: $\Psi(x,y,z)=A(x)B(y)C(z)$
+
+$$\frac{B(y)C(z)}{A(x)B(y)C(z)}\frac{d^2 A(x)}{d x^2}+\frac{A(x)C(z)}{A(x)B(y)C(z)}\frac{d^2 B(y)}{d y^2}+\frac{A(x)B(y)}{A(x)B(y)C(z)}\frac{d^2 C(z)}{d z^2}=0$$
+
+$$\frac{1}{A(x)}\frac{d^2 A(x)}{d x^2}+\frac{1}{B(y)}\frac{d^2 B(y)}{d y^2}+\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}=0$$
+
+**Paso #3:** Separar variables.
+
+Todos los términos que dependan de una varible se colocan de un lado de la igualdad:
+
+$$\frac{1}{A(x)}\frac{d^2 A(x)}{d x^2}= -\biggl(\frac{1}{B(y)}\frac{d^2 B(y)}{d y^2}+\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}\biggr)$$
+
+Debido a que el lado izquierdo solo depende de $x$ y el lado derecho depende de $y$ y $z$; la única forma de lograr la igualdad es que cada lado de la igualdad sea igual a una constante $n^2$ (constante de separación).
+
+$$\frac{1}{A(x)}\frac{d^2 A(x)}{d x^2}=n^2$$
+
+\begin{equation} 
+  \frac{d^2 A(x)}{d x^2}=A(x)n^2
+  (\#eq:sep1)
+\end{equation} 
+
+Además:
+
+\begin{equation} 
+  \frac{1}{B(y)}\frac{d^2 B(y)}{d y^2}+\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}=-n^2
+  (\#eq:sep2)
+\end{equation} 
+
+
+Para la ecuación \@ref(eq:sep2) tenemos que uasar el paso #3, es decir, separar variables:
+
+$$\frac{1}{B(y)}\frac{d^2 B(y)}{d y^2}=-\biggl(n^2+\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}\biggr)$$
+
+Dado que el lado izquierdo depende de la varible $y$ y el lado derecho depende de $z$, la única forma de lograr la igualdad es que cada lado sea igual a una constante $m^2$
+
+$$\frac{1}{B(y)}\frac{d^2 B(y)}{d y^2}=m^2$$
+
+\begin{equation} 
+  \frac{d^2 B(y)}{d y^2}=m^2B(y)
+  (\#eq:sep3)
+\end{equation} 
+
+Mientras que:
+$$\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}+n^2=-m^2$$
+$$\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}=-(m^2+n^2)$$
+
+Sea $p^2=m^2+n^2$ entonces:
+
+$$\frac{1}{C(z)}\frac{d^2 C(z)}{d z^2}=-p^2$$
+
+\begin{equation} 
+ \frac{d^2 C(z)}{d z^2}=-p^2C(z)
+  (\#eq:sep4)
+\end{equation} 
+
+**Paso #4:** Resolver las ecuaciones.
+
+*Solución de la ecuación \@ref(eq:sep1)*
+
+$$\frac{d^2 A(x)}{d x^2}=n^2A(x)$$
+
+
+
+$A(x)$  debe de ser una función que al derivarla 2 veces con respecto a x sea igual a $A(x)$ por una constante $n^2$. Lo cual indica que $A(x)$ debe de ser una función exponencial.
+
+Sea $A(x)= e^{rx}$ (con r constante), entonces:
+$$\frac{d A(x)}{d x}=re^{rx}$$
+$$\frac{d^2 A(x)}{d x^2}=r^2e^{rx}$$
+
+Igualando con la ecuación \@ref(eq:sep1), tenemos que:
+
+$$r^2e^{rx}=n^2e^{rx}$$
+$$r^2=n^2$$
+$$r=\pm n$$
+
+Entonces las soluciones de la ecuación diferencial para $A(x)$ son:
+
+$$A_1(x)=ae^{nx}$$
+$$A_2(x)=be^{-nx}$$
+
+con $a$ y $b$ constantes.
+
+De forma general $A(x)=ae^{nx}+be^{-nx}$
+
+
+*De forma análoga a la solución de la ecuación \@ref(eq:sep1), la solución de la ecuación \@ref(eq:sep3) es:* 
+
+$$B(y)=ce^{my}+de^{-my}$$
+
+con $c$ y $d$ constantes.
+
+
+*Solución de la ecuación \@ref(eq:sep4)*
+$$\frac{d^2 C(z)}{d z^2}=-p^2C(z)$$
+
+Sea $C(z)= e^{rz}$ entonces:
+
+$$\frac{d C(z)}{d x}=re^{rz}$$
+$$\frac{d^2 C(z)}{d x^2}=r^2e^{rz}$$
+
+Igualando con la ecuación \@ref(eq:sep1), obtenemos:
+
+$$r^2e^{rz}=-p^2e^{rz}$$
+$$r^2=-p^2$$
+$$r=\pm ip$$
+
+Entonces las soluciones de la ecuación diferencial para $C(z)$ son:
+$$C_1(x)=ge^{pzi}$$
+$$C_2(x)=he^{-pzi}$$
+con $g$ y $h$ constantes.
+
+Sabemos que $e^{\theta i} = cos\theta +isen\theta$, esto implica:
+$$C_1(x)=g\Bigl(\cos (pz) +i\sin (pz)\Bigr)$$
+$$C_2(x)=h\Bigl(\cos (pz) -i\sin (pz)\Bigr)$$
+
+En general: 
+
+$$C(z)= gcos (pz) +ig\sin (pz)+h\cos (pz) -ih\sin (pz)$$
+$$= (g+h)cos (pz) +i(g-h)\sin (pz)$$
+$$C(z)=jcos (pz) +k\sin (pz)$$
+
+con $j$ y $k$ constantes.
+
+Resumiendo tenemos las soluciones: 
+
+$$A(x)=ae^{nx}+be^{-nx}$$
+$$B(y)=ce^{my}+de^{-my}$$
+$$C(z)=jcos (pz) +k\sin (pz)$$
+
+con $a$, $b$, $c$, $d$, $j$, $k$ constantes.
+
+**Observación:** Las soluciones corresponden a un valor determinado de las constantes de separación, por lo cual es conveniente escribirlas de la siguiente forma: 
+
+$$A_n(x)=a_ne^{nx}+b_ne^{-nx}$$
+$$B_m(y)=c_me^{my}+d_me^{-my}$$
+$$C_p(z)=j_pcos (pz) +k_p\sin (pz)$$
+
+con $a_n$, $b_n$, $c_m$, $d_m$, $j_p$, $k_p$ constantes.
+
+*La solución general de la ecuación de Laplace $\bigtriangledown^2\Psi(x,y,z)=0$ es:*
+
+$$\Psi(x,y,z)=\sum_{m,n}(a_ne^{nx}+b_ne^{-nx})(c_me^{my}+d_me^{-my})(j_pcos (pz) +k_p\sin (pz))$$
+
+donde se satisface $m^2+n^2=p^2$.
+
+**Observación:** Debido a la arbitrariedad de asignar el signo "$-$" a las constantes de separación, es posible generar también las siguientes soluciones:
+
+$$\Psi(x,y,z)=\sum_{m,p}(a_n\cos(nx)+b_n\sin(nx))(c_me^{my}+d_me^{-my})(j_p e^{pz} +k_p e^{-pz})$$
+
+con $m^2+p^2=n^2$.
+
+$$\Psi(x,y,z)=\sum_{m,n}(a_ne^{nx}+b_ne^{-nx})(c_m \cos(my)+d_msen(my))(j_p e^{pz} +k_p e^{-pz})$$
+
+con $n^2+p^2=m^2$.
+
+
+
